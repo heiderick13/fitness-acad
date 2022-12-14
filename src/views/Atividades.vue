@@ -1,10 +1,9 @@
-
-
-  
 <script setup>
+import NavBar from '../components/NavBar.vue';
 </script>
   
 <template>
+  <NavBar></NavBar>
   <section id="atividades">
     <ul id="nossas_atividades">
       <li class="atividade">
