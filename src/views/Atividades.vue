@@ -7,7 +7,7 @@ import NavBar from '../components/NavBar.vue';
   <section id="atividades">
     <ul id="nossas_atividades">
       <li class="atividade">
-        <h2 class="titulo_atividade">Lorem</h2>
+        <h2 class="titulo_atividade">Atividade</h2>
         <p class="descricao_atividade">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga
           quaerat nihil velit quas, possimus
@@ -15,7 +15,7 @@ import NavBar from '../components/NavBar.vue';
         <p class="preco_atividade">R$ XXX,XX</p>
       </li>
       <li class="atividade">
-        <h2 class="titulo_atividade">Lorem</h2>
+        <h2 class="titulo_atividade">Atividade</h2>
         <p class="descricao_atividade">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga
           quaerat nihil velit quas, possimus
@@ -23,7 +23,7 @@ import NavBar from '../components/NavBar.vue';
         <p class="preco_atividade">R$ XXX,XX</p>
       </li>
       <li class="atividade">
-        <h2 class="titulo_atividade">Lorem</h2>
+        <h2 class="titulo_atividade">Atividade</h2>
         <p class="descricao_atividade">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga
           quaerat nihil velit quas, possimus
@@ -31,7 +31,7 @@ import NavBar from '../components/NavBar.vue';
         <p class="preco_atividade">R$ XXX,XX</p>
       </li>
       <li class="atividade">
-        <h2 class="titulo_atividade">Lorem</h2>
+        <h2 class="titulo_atividade">Atividade</h2>
         <p class="descricao_atividade">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga
           quaerat nihil velit quas, possimus
@@ -39,7 +39,7 @@ import NavBar from '../components/NavBar.vue';
         <p class="preco_atividade">R$ XXX,XX</p>
       </li>
       <li class="atividade">
-        <h2 class="titulo_atividade">Lorem</h2>
+        <h2 class="titulo_atividade">Atividade</h2>
         <p class="descricao_atividade">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga
           quaerat nihil velit quas, possimus
@@ -47,7 +47,7 @@ import NavBar from '../components/NavBar.vue';
         <p class="preco_atividade">R$ XXX,XX</p>
       </li>
       <li class="atividade">
-        <h2 class="titulo_atividade">Lorem</h2>
+        <h2 class="titulo_atividade">Atividade</h2>
         <p class="descricao_atividade">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga
           quaerat nihil velit quas, possimus
@@ -60,8 +60,10 @@ import NavBar from '../components/NavBar.vue';
 
 <style scoped>
 #atividades {
-  height: 100vh;
+  min-height: 100vh;
+  background-color: #31119B;
   align-content: center;
+  color: #FFA41C;
 }
 
 #atividades ul {
@@ -71,20 +73,38 @@ import NavBar from '../components/NavBar.vue';
   gap: 2rem;
 }
 
-#atividades li {
+#atividades .atividade {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  padding: 1rem;
+  min-height: 400px;
+  /* min-width: 300px; */
+  line-height: 2;
   list-style: none;
   place-self: center;
-  height: 400px;
-  width: 300px;
-  border-radius: 1rem;
-  border: solid 1px black;
+  border-radius: .5rem;
+  border: solid 2px #FFA41C;
   text-align: center;
 }
 
-#atividades .preco_atividade {
+.atividade .preco_atividade {
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1000px) {
+  #atividades ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #atividades ul {
+    grid-template-columns: 1fr;
+  }
+
+  #atividades li {
+    max-width: 400px;
+  }
 }
 </style>
