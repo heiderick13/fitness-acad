@@ -22,7 +22,7 @@ export default {
 
 <template>
     <NavBar></NavBar>
-    <section class="container bg-light">
+    <section class="d-flex flex-column m-3 bg-light mwidth mx-auto">
         <h2>Cadastro</h2>
         <div class="form-group">
             <label for="">Nome</label>
@@ -65,19 +65,23 @@ export default {
             <small id="helpCPF" class="text-muted"></small>
         </div>
 
-        <div class="mb-3">
-            <button type="button" class="btn btn-primary mx-1" @click="cadastro()">
+        <div class="mx-auto m-2">
+            <button type="button" class="btn btn-outline-success mx-2" @click="cadastro()">
                 Cadastrar
             </button>
-            <button type="button" class="btn btn-danger">
+            <button type="button" class="btn btn-outline-success mx-2">
                 Sair
             </button>
         </div>
-        <!-- Mostrar o conteúdo da  variável "{{ }}" -->
-        <!-- {{ user.nome }} - {{ user.email }} -->
     </section>
 </template>
 
 <style scoped>
-
+.mwidth {
+    max-width: 520px;
+}
+.form-control:focus{
+    border-color: #198754;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #198754;
+}
 </style>
