@@ -7,52 +7,52 @@ import NavBar from '../components/NavBar.vue';
   <section id="atividades">
     <ul id="nossas_atividades">
       <li class="atividade">
-        <h2 class="titulo_atividade">Atividade</h2>
+        <h2 class="titulo_atividade">Musculação</h2>
         <p class="descricao_atividade">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga
-          quaerat nihil velit quas, possimus
+          Aqui você encontra os melhores equipamentos de musculação para ficar
+          como o físico pronta(o) para o verão.
         </p>
-        <p class="preco_atividade">R$ XXX,XX</p>
+        <p class="preco_atividade">R$ 149,90</p>
       </li>
       <li class="atividade">
-        <h2 class="titulo_atividade">Atividade</h2>
+        <h2 class="titulo_atividade">Boxe</h2>
         <p class="descricao_atividade">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga
-          quaerat nihil velit quas, possimus
+          Aulas de boxe com os melhores instrutores da cidade
+          para você aprender a arte dos ringues e se manter na melhor forma.
         </p>
-        <p class="preco_atividade">R$ XXX,XX</p>
+        <p class="preco_atividade">R$ 199,99</p>
       </li>
       <li class="atividade">
-        <h2 class="titulo_atividade">Atividade</h2>
+        <h2 class="titulo_atividade">Jiu-jitsu</h2>
         <p class="descricao_atividade">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga
-          quaerat nihil velit quas, possimus
+          Aprenda essa luta que consagrou diversos brasileiros mundo pelo mundo.
+          Temos os melhores instrures por aqui.
         </p>
-        <p class="preco_atividade">R$ XXX,XX</p>
+        <p class="preco_atividade">R$ 199,99</p>
       </li>
       <li class="atividade">
-        <h2 class="titulo_atividade">Atividade</h2>
+        <h2 class="titulo_atividade">Natação</h2>
         <p class="descricao_atividade">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga
-          quaerat nihil velit quas, possimus
+          Venha fazer esse exercício que além de ser um dos melhores para a saúde
+          e condicionamento físico, ainda é refrescante. (Temos piscina aquecido para o inverno)
         </p>
-        <p class="preco_atividade">R$ XXX,XX</p>
+        <p class="preco_atividade">R$ 169,99</p>
       </li>
       <li class="atividade">
-        <h2 class="titulo_atividade">Atividade</h2>
+        <h2 class="titulo_atividade">Bike Indoor</h2>
         <p class="descricao_atividade">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga
-          quaerat nihil velit quas, possimus
+          É um exercício aeróbico que mistura elementos de diferentes ritmos, como salsa, samba, reggaetón e até mesmo
+          hip-hop, tornando-se uma dança divertida, mas que queima muitas calorias!
         </p>
-        <p class="preco_atividade">R$ XXX,XX</p>
+        <p class="preco_atividade">R$ 119,99</p>
       </li>
       <li class="atividade">
-        <h2 class="titulo_atividade">Atividade</h2>
+        <h2 class="titulo_atividade">Jump</h2>
         <p class="descricao_atividade">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga
-          quaerat nihil velit quas, possimus
+          Aula pré-coreografada moderada a intensa com objetivo de melhorar o fôlego, a
+          resistência muscular e a coordenação motora utilizando um mini-trampolim.
         </p>
-        <p class="preco_atividade">R$ XXX,XX</p>
+        <p class="preco_atividade">R$ 119,99</p>
       </li>
     </ul>
   </section>
@@ -63,7 +63,7 @@ import NavBar from '../components/NavBar.vue';
   min-height: 100vh;
   background-color: #31119B;
   align-content: center;
-  color: #FFA41C;
+  color: #fefefe;
 }
 
 #atividades ul {
@@ -79,7 +79,6 @@ import NavBar from '../components/NavBar.vue';
   justify-content: space-evenly;
   padding: 1rem;
   min-height: 400px;
-  /* min-width: 300px; */
   line-height: 2;
   list-style: none;
   place-self: center;
