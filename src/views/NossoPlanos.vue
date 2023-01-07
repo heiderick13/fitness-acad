@@ -1,5 +1,6 @@
 <script setup>
 import NavBar from '../components/NavBar.vue';
+import AcadFooter from '../components/AcadFooter.vue'
 
 // export default {
 //   components: { NavBar }
@@ -65,13 +66,13 @@ import NavBar from '../components/NavBar.vue';
       <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="https://pixabay.com/get/gd26c9e67f899aba69be1ff96796aa6ed4fa1a8d66441967ad49b914fca209a811061007f94d5ffd384288c94c4f5107838fcebdb5ec53b535f84b89cd245010382221042fa7703972d456b4277d8bb97_1280.jpg" class="d-block w-100" alt="...">
+            <img :src="'https://pixabay.com/get/gd26c9e67f899aba69be1ff96796aa6ed4fa1a8d66441967ad49b914fca209a811061007f94d5ffd384288c94c4f5107838fcebdb5ec53b535f84b89cd245010382221042fa7703972d456b4277d8bb97_1280.jpg'" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="https://pixabay.com/get/gd26c9e67f899aba69be1ff96796aa6ed4fa1a8d66441967ad49b914fca209a811061007f94d5ffd384288c94c4f5107838fcebdb5ec53b535f84b89cd245010382221042fa7703972d456b4277d8bb97_1280.jpg" class="d-block w-100" alt="...">
+            <img :src="'https://pixabay.com/get/gd26c9e67f899aba69be1ff96796aa6ed4fa1a8d66441967ad49b914fca209a811061007f94d5ffd384288c94c4f5107838fcebdb5ec53b535f84b89cd245010382221042fa7703972d456b4277d8bb97_1280.jpg'" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="https://pixabay.com/get/gd26c9e67f899aba69be1ff96796aa6ed4fa1a8d66441967ad49b914fca209a811061007f94d5ffd384288c94c4f5107838fcebdb5ec53b535f84b89cd245010382221042fa7703972d456b4277d8bb97_1280.jpg" class="d-block w-100" alt="...">
+            <img :src="'https://pixabay.com/get/gd26c9e67f899aba69be1ff96796aa6ed4fa1a8d66441967ad49b914fca209a811061007f94d5ffd384288c94c4f5107838fcebdb5ec53b535f84b89cd245010382221042fa7703972d456b4277d8bb97_1280.jpg'" class="d-block w-100" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -82,7 +83,7 @@ import NavBar from '../components/NavBar.vue';
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-      </div>
-    
+      </div>    
     </section>
+    <AcadFooter></AcadFooter>    
 </template>

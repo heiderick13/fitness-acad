@@ -1,5 +1,6 @@
 <script setup>
 import NavBar from '../components/NavBar.vue';
+import AcadFooter from '../components/AcadFooter.vue'
 </script>
   
 <template>
@@ -56,6 +57,7 @@ import NavBar from '../components/NavBar.vue';
       </li>
     </ul>
   </section>
+  <AcadFooter></AcadFooter>
 </template>
 
 <style scoped>
