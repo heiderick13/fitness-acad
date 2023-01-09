@@ -56,7 +56,7 @@ export default {
                         <RouterLink class="nav-link" aria-current="page" to="/user/add">Cadastro</RouterLink>
                     </li>
                     <li class="nav-item">
-                        <RouterLink class="nav-link" aria-current="page" to="/user/enter">Entrar</RouterLink>
+                        <RouterLink class="nav-link" aria-current="page" to="/user/login">Entrar</RouterLink>
                     </li>
                 </ul>
             </div>
