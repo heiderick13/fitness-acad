@@ -14,7 +14,14 @@ export default {
     },
     methods: {
         cadastro() {
-            userService.add(this.user);
+            userService.add(this.user)
+            .then(res => {
+                    console.log(res.data);
+                    alert("Cadastrado!");
+                    this.$router.push("/");
+                }).catch(error => {
+                    alert(error.data);
+                });
         }
     }
 }
