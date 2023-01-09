@@ -1,4 +1,5 @@
 <script>
+import AcadFooter from '../components/AcadFooter.vue';
 
 </script>
 
@@ -26,6 +27,7 @@
                 </RouterLink>
             </div>
         </div>
+        <AcadFooter></AcadFooter>
     </section>
 </template>
 
