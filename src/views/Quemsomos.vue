@@ -8,7 +8,7 @@ import AcadFooter from '../components/AcadFooter.vue';
 
 </script>
 <template>
-  <NavBar></NavBar>
+  <!-- <NavBar></NavBar> -->
   <section>
     <h1>Quem Somos</h1>
   </section>
