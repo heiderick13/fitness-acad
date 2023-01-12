@@ -1,5 +1,6 @@
 <script setup>
 import NavBar from '../components/NavBar.vue';
+import AcadFooter from '../components/AcadFooter.vue';
 
 // export default {
 //   components: { NavBar }
@@ -7,10 +8,11 @@ import NavBar from '../components/NavBar.vue';
 
 </script>
 <template>
-  <NavBar></NavBar>
+  <!-- <NavBar></NavBar> -->
   <section>
     <h1>Quem Somos</h1>
   </section>
+  <AcadFooter></AcadFooter>
 </template>
 
 <style scoped>
