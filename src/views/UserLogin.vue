@@ -1,10 +1,13 @@
 <script>
 import AcadFooter from '../components/AcadFooter.vue';
+export default {
+    components: { AcadFooter },
+}
 
 </script>
 
 <template>
-    <section class="container vh-100">
+    <section class="container">
         <div class="d-flex flex-column bg-light mwidth mx-auto">
 
             <h2 class="text-center mt-3">Login</h2>
@@ -18,30 +21,34 @@ import AcadFooter from '../components/AcadFooter.vue';
                 <input type="email" placeholder="*******" class="form-control">
             </div>
             <div class="mx-auto my-2">
-                <button type="button" class="btn btn-outline-success mx-2">
+                <button type="button" class="btn  mx-2">
                     Login
                 </button>
-                <RouterLink type="button" class="btn btn-outline-success mx-2"
+                <RouterLink type="button" class="btn  mx-2"
                     to="/">
                     Voltar
                 </RouterLink>
             </div>
         </div>
-        <AcadFooter></AcadFooter>
     </section>
+    <AcadFooter></AcadFooter>
 </template>
 
 <style scoped>
 .container {
     margin-top: 100px;
+    margin-bottom: 35vh;
 }
 .mwidth {
     max-width: 520px;
 }
 
 .form-control:focus {
-    border-color: #198754;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #198754;
+    border-color: #260d78aa;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #260d78;
 }
-
+.btn:hover {
+    background-color: #260d78dd;
+    color:white;
+}
 </style>
