@@ -13,7 +13,7 @@ export default {
 <footer>    
         <div id="footerContainer">
             <div id="footerLogo">
-               <h2 id="logo">FIT ACAD</h2>
+               <h2 id="logo">FITNESS</h2>
             </div>
 
             <div id="footerMap">
@@ -56,8 +56,8 @@ li {
 
 footer {
     position: relative;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(rgba(75,16,254,0.8), rgba(0,0,0,0.8)), url("../../images/exercise-weights-iron-dumbbell-with-extra-plates.jpg");
+    font-family: 'Poppins', sans-serif; 
+    background: linear-gradient(rgba(71, 45, 157,0.8), rgba(0,0,0,0.8)), url("../../images/exercise-weights-iron-dumbbell-with-extra-plates.jpg");
     background-position: center;
     background-size: cover; 
 }
@@ -68,14 +68,14 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     padding: 0 7px;
-    border-top: 3px solid #ffa41c;        
+    border-top: 3px solid var(--secondary);        
 }
 
 #footerLogo {
     text-align: center;
     padding: 70px 0 30px 0;
     margin-bottom: 30px;
-    color: #ffa41c;
+    color: var(--secondary);
 }
 
 #logo {    
@@ -90,7 +90,7 @@ footer {
 
 #footerMap img {
     width: 100%;
-    border: 4px solid #ffa41c;
+    border: 4px solid var(--secondary);
     border-radius: 20px;
     box-shadow: 1px 1px 1px #000;
     max-height: 190px;
@@ -103,7 +103,7 @@ footer {
     align-items: flex-start;
     padding-bottom: 5px;
     margin-top: 35px;
-    color: #ffa41c;
+    color:var(--secondary);
 }
 
 #footerData h3{
@@ -126,7 +126,7 @@ footer {
     justify-content: center;
     padding-left: 120px;
     padding-bottom: 30px; 
-    color: #ffa41c;
+    color: var(--secondary);
     gap: 5px;
     text-shadow: 1px 1px 1px #000;   
 }
@@ -154,12 +154,12 @@ footer {
 
 .footerLink {
     text-decoration: none;   
-    color: #260d78;    
+    color: var(--primary);    
     padding-top: 15px;      
 }
 .footerLink:hover {
     cursor: pointer;
-    color: #fff;
+    color:var(--white);
     transition: 0.5s;       
 }
 
@@ -173,8 +173,7 @@ footer {
 
     #footerLogo {
         text-align: left;
-        padding: 40px 85px 0 0;
-        color: #ffa41c;
+        padding: 40px 85px 0 0;        
     }
 
     #footerMap {
@@ -186,7 +185,6 @@ footer {
         flex-direction:column;
         align-items: flex-start;
         padding: 58px 0px 0 80px;
-        color: #ffa41c;
     }
 
     #footerData h3{
@@ -248,8 +246,7 @@ footer {
 
     #footerLogo {
         text-align: left;
-        padding: 25px 0px 0 150px;
-        color: #ffa41c;
+        padding: 25px 0px 0 150px;        
     }
 
     #footerMap {
