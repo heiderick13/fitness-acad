@@ -10,68 +10,17 @@ import NavBar from '../components/NavBar.vue';
 <template>
   <NavBar></NavBar>
  <section>
-      <!-- <div class="container-fluid">
-        <div id="mainSlider" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#mainSlider" data-slide-to="0" class="active"></li>
-            <li data-target="#mainSlider" data-slide-to="1"></li>
-            <li data-target="#mainSlider" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                src="https://pixabay.com/get/g7400dcc06a3d82a1620bb7f7e5e00c83b44540e754295083313c4ae5b8bfe7761336da1321e99632e3cd0cd4e42f479bf87c0881c621d7dfd9f3de29ac47f20ec173494f6d5c0bbbb0032f94dee5e997_1280.jpg"
-                class="d-block w-100" alt="venha conhecer nossos planos">
-              <div class="carousel-caption d-none d-md-block">
-                <h2>Venha conhecer nossas instalações! </h2>
-                <a href="#" class="main-btn">Quem somos</a>
-              </div>
-
-            </div>
-
-            <div class="carousel-item">
-              <img
-                src="https://pixabay.com/get/g7400dcc06a3d82a1620bb7f7e5e00c83b44540e754295083313c4ae5b8bfe7761336da1321e99632e3cd0cd4e42f479bf87c0881c621d7dfd9f3de29ac47f20ec173494f6d5c0bbbb0032f94dee5e997_1280.jpg"
-                class="d-block w-100" alt="venha conhecer nossos planos">
-              <div class="carousel-caption d-none d-md-block">
-                <h2>Venha conhecer nossos planos de academia! </h2>
-                <a href="#" class="main-btn">Conhecer planos</a>
-              </div>
-
-            </div>
-
-            <div class="carousel-item">
-              <img
-                src="https://pixabay.com/get/gd26c9e67f899aba69be1ff96796aa6ed4fa1a8d66441967ad49b914fca209a811061007f94d5ffd384288c94c4f5107838fcebdb5ec53b535f84b89cd245010382221042fa7703972d456b4277d8bb97_1280.jpg"
-                class="d-block w-100" alt="venha conhecer nossos planos">
-              <div class="carousel-caption d-none d-md-block">
-                <h2>Veja nossa academia mais proxima de voce! </h2>
-                <a href="#" class="main-btn">Nossa Localização</a>
-              </div>
-
-            </div>
-          </div>
-          <a href="#mainSlider" class="carousel-control-prev" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span></a>
-
-          <a href="#mainSlider" class="carousel-control-next" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">next</span></a>
-
-        </div>
-
-      </div> -->
-      <div id="carouselExample" class="carousel slide">
+      
+      <div id="carouselExample" class="carousel slide h-25">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="https://pixabay.com/get/gd26c9e67f899aba69be1ff96796aa6ed4fa1a8d66441967ad49b914fca209a811061007f94d5ffd384288c94c4f5107838fcebdb5ec53b535f84b89cd245010382221042fa7703972d456b4277d8bb97_1280.jpg" class="d-block w-100" alt="...">
+            <img src="https://pixabay.com/get/g4f720afc0477570967bf374499ef33b410fd8fcd321abba928751dfdb3ae74b5f000ab2403a722bc076147c51f934d0b89a3874cad63ce4312d5176ad35388ca3c9a4608ae1367c42cfab3029f04bbae_1280.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="https://pixabay.com/get/gd26c9e67f899aba69be1ff96796aa6ed4fa1a8d66441967ad49b914fca209a811061007f94d5ffd384288c94c4f5107838fcebdb5ec53b535f84b89cd245010382221042fa7703972d456b4277d8bb97_1280.jpg" class="d-block w-100" alt="...">
+            <img src="https://pixabay.com/get/g75e9add3452d8182ee5904a616904a12d103c37a5e6de53eb3c46440371f908eee1a5636534b93a8f26bdb78126b7d997d5caa987249634d9fb4dd3ce9adfbc44cbb507d9074c5c5165d5f668767b91f_1280.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="https://pixabay.com/get/gd26c9e67f899aba69be1ff96796aa6ed4fa1a8d66441967ad49b914fca209a811061007f94d5ffd384288c94c4f5107838fcebdb5ec53b535f84b89cd245010382221042fa7703972d456b4277d8bb97_1280.jpg" class="d-block w-100" alt="...">
+            <img src="https://pixabay.com/get/g10530da67ddcccab4394a16f7b924fea28b0d61bd7fd31f413b6f49f2eb3e76e08bebcb62844cbfacb56a4f590be811bfc4d71438d247fefba47aefd3ea0731b79381eef0f5cbdc13cb45bdea8164314_1280.jpg" class="d-block w-100" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
