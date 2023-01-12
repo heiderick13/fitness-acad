@@ -1,5 +1,5 @@
 <script>
-import {RouterLink} from 'vue-router'
+
 export default {
     name: 'AcadFooter',
 }
@@ -10,14 +10,16 @@ export default {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 
-<footer>
-        <div class="footerContainer">
+<footer>    
+        <div id="footerContainer">
             <div id="footerLogo">
                <h2 id="logo">FIT ACAD</h2>
             </div>
+
             <div id="footerMap">
                 <img src="../../images/local.png" alt="mapa">
             </div>
+
             <div id="footerData">
                 <h3>Endereço</h3>
                 <ul id="footerInfo">
@@ -27,10 +29,12 @@ export default {
                 </ul>
             </div>
         </div>
+
         <div id="footerFone">
            <li><i class="fa-solid fa-square-phone"></i></li>
            <li><b>(21) 99999-9999</b></li>
         </div>
+
         <div id="socialMedia">
             <ul>                
                 <RouterLink class="footerLink" to="#"><i class="fa-brands fa-facebook-f"></i></RouterLink>
@@ -43,6 +47,7 @@ export default {
 </template>
 
 <style scoped>
+    
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Poppins:wght@400;500&family=Prosto+One&display=swap');
 
 li {
@@ -51,13 +56,13 @@ li {
 
 footer {
     position: relative;
-    /* background-color: #4b10fe; */
-        font-family: 'Poppins', sans-serif;
-        background: linear-gradient(rgba(75,16,254,0.8), rgba(0,0,0,0.8)), url("../../images/exercise-weights-iron-dumbbell-with-extra-plates.jpg");
-        background-position: center;
-        background-size: cover; 
-    }
-.footerContainer {    
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgba(75,16,254,0.8), rgba(0,0,0,0.8)), url("../../images/exercise-weights-iron-dumbbell-with-extra-plates.jpg");
+    background-position: center;
+    background-size: cover; 
+}
+
+#footerContainer {    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -114,15 +119,11 @@ footer {
 }
 
 #footerFone { 
-    /* position: absolute;      */
-    /* background-color: #31119b; */
     background-color: transparent;
     display: flex;
     font-size: 0.8rem;
     align-items: center;
     justify-content: center;
-    /* bottom: 130px;
-    right: 77px;  */
     padding-left: 120px;
     padding-bottom: 30px; 
     color: #ffa41c;
@@ -140,8 +141,7 @@ footer {
     align-items: center;
     justify-content: center;
     height: 7vh;
-    width: 100%;
-    /* margin-top: 50px; */
+    width: 100%;    
 }
 
 #socialMedia ul {
@@ -151,6 +151,7 @@ footer {
     gap: 60px;
     font-size: 1.5rem;
 }
+
 .footerLink {
     text-decoration: none;   
     color: #260d78;    
@@ -164,7 +165,7 @@ footer {
 
 @media screen and (min-width: 700px) {
     
-    .footerContainer {    
+    #footerContainer {    
         justify-content: none;
         padding: 0 5px;
         gap: 5px;            
@@ -178,8 +179,7 @@ footer {
 
     #footerMap {
         max-width: 250px;
-        padding-top: 80px;
-               
+        padding-top: 80px;               
     }   
 
     #footerData {
@@ -190,8 +190,7 @@ footer {
     }
 
     #footerData h3{
-        padding-bottom: 15px;
-        
+        padding-bottom: 15px;        
     }
 
     #footerFone {
@@ -208,8 +207,8 @@ footer {
     }
 }
 
-
 @media screen and (min-width: 815px) {
+
     #footerFone {      
         right: 78px;
         bottom: 184px;
@@ -217,6 +216,7 @@ footer {
 }
 
 @media screen and (min-width: 900px) {
+
     #footerLogo {
         padding: 40px 120px 0 0;        
     }
@@ -235,11 +235,12 @@ footer {
 }
 
 @media screen and (min-width: 1200px) {
+
     footer{
         position: relative;
     }
 
-    .footerContainer {    
+    #footerContainer {    
         justify-content: space-between;
         padding: 0 10px;
         margin: 0;            
