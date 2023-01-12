@@ -12,8 +12,9 @@ export default {
 
 <footer>    
         <div id="footerContainer">
+
             <div id="footerLogo">
-               <h2 id="logo">FITNESS</h2>
+               <h2 id="logo">Fitness</h2>
             </div>
 
             <div id="footerMap">
