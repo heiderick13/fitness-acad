@@ -27,11 +27,7 @@ const router = createRouter({
       name: "atividades",
       component: () => import("../views/Atividades.vue"),
     },
-    {
-      path: "/Esporte/Esporte",
-      name: "Esporte-Esporte",
-      component: () => import("../views/Esportes.vue"),
-    },
+    
     {
       path: "/user/login",
       name: "/user/login",

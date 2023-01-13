@@ -2,13 +2,11 @@
 import NavBar from '../components/NavBar.vue';
 import AcadFooter from '../components/AcadFooter.vue';
 
-// export default {
-//   components: { NavBar }
-// }
+
 
 </script>
 <template>
-  <!-- <NavBar></NavBar> -->
+  <NavBar></NavBar>
   <section>
     <h1>Quem Somos</h1>
   </section>

@@ -44,11 +44,14 @@ export default {
 }
 
 .form-control:focus {
-    border-color: #260d78aa;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #260d78;
+    border-color: var(--primary);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px var(--primary);
+}
+.btn {
+    border-color:var(--primary);
 }
 .btn:hover {
-    background-color: #260d78dd;
-    color:white;
+    background-color: var(--primary);
+    color:var(--white);
 }
 </style>

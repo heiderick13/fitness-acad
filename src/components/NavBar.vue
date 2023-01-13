@@ -49,7 +49,7 @@ export default {
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                        <button class="btn" type="submit">Pesquisar</button>
                     </form>
 
                     <li class="nav-item">
@@ -65,5 +65,17 @@ export default {
 </template>
 
 <style scoped>
+.btn {
+    color:var(--white);
+    border-color:var(--white);
+}
 
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px var(--primary);
+}
+.btn:hover {
+    background-color: var(--primary);
+    color:var(--white);
+}
 </style>
