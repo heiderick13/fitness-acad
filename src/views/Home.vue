@@ -122,7 +122,7 @@ import AcadFooter from '../components/AcadFooter.vue'
 
   font-weight: 300;
 
-  margin-bottom: 400px;
+  margin-bottom: 500px;
 
   color: var(--white);
 
