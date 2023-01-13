@@ -73,10 +73,10 @@ export default {
         </div>
 
         <div class="mx-auto m-2">
-            <button type="button" class="btn btn-outline-success mx-2" @click="cadastro()">
+            <button type="button" class="btn mx-2" @click="cadastro()">
                 Cadastrar
             </button>
-            <button type="button" class="btn btn-outline-success mx-2">
+            <button type="button" class="btn mx-2">
                 Sair
             </button>
         </div>
@@ -88,7 +88,14 @@ export default {
     max-width: 520px;
 }
 .form-control:focus{
-    border-color: #198754;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #198754;
+    border-color: var(--primary);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px var(--primary);
+}
+.btn {
+    border-color:var(--primary);
+}
+.btn:hover {
+    color:var(--white);
+    background-color: var(--primary);
 }
 </style>

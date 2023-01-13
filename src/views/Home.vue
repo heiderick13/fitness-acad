@@ -16,12 +16,25 @@ import AcadFooter from '../components/AcadFooter.vue'
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="../../images/abs-g468a22f11_1280.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-md-block text-center">
+            <h5>Quem Somos?</h5>
+            <p>Uma Acadeia Voltada Para Aumentar seu Desempenho! </p>
+          </div>
         </div>
         <div class="carousel-item">
           <img src="../../images/exercise-weights-iron-dumbbell-with-extra-plates.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-md-block text-center">
+            <h5>Quem Somos?</h5>
+            <p>Uma Acadeia Voltada Para Aumentar seu Desempenho! </p>
+          </div>
         </div>
         <div class="carousel-item">
-          <img src="../../images/fitness-g0cec0b7c5_1920.jpg" class="d-block w-100" alt="...">
+          <img src="../../images/training-ge79437eb8_1280.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-md-block text-center">
+            <h5>Quem Somos?</h5>
+            <p>Uma Acadeia Voltada Para Aumentar seu Desempenho! </p>
+          </div>
+          
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -91,6 +104,29 @@ import AcadFooter from '../components/AcadFooter.vue'
 </template>
 
 <style scoped>
+.carousel-caption h5 {
+
+  font-size: 60px;
+
+  margin-bottom: 30px;
+
+  color: var(--secondary); 
+
+}
+
+
+
+.carousel-caption p {
+
+  font-size: 35px;
+
+  font-weight: 300;
+
+  margin-bottom: 400px;
+
+  color: var(--white);
+
+}
 .carousel-inner {
   height: 90vh;
 }
