@@ -34,7 +34,7 @@ import AcadFooter from '../components/AcadFooter.vue'
             <h5>Quem Somos?</h5>
             <p>Uma Acadeia Voltada Para Aumentar seu Desempenho! </p>
           </div>
-          
+
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -101,32 +101,44 @@ import AcadFooter from '../components/AcadFooter.vue'
   </section>
 
   <AcadFooter></AcadFooter>
+  <span id="top-btn"> <i class="bi bi-chevron-up"></i> </span>
 </template>
 
 <style scoped>
-.carousel-caption h5 {
-
-  font-size: 60px;
-
-  margin-bottom: 30px;
-
-  color: var(--secondary); 
-
+html {
+  scroll-behavior: smooth;
 }
 
+#top-btn {
+  position: fixed;
+  right: 2%;
+  bottom: 1%;
+  font-size: 28px;
+  border: none;
+  background-color: var(--light-pink);
+  padding: 1rem;
+  clip-path: circle();
+  opacity: .6;
+  cursor: pointer;
+}
 
+#top-btn:hover {
+  opacity: 1;
+}
+
+.carousel-caption h5 {
+  font-size: 60px;
+  margin-bottom: 30px;
+  color: var(--secondary);
+}
 
 .carousel-caption p {
-
   font-size: 35px;
-
   font-weight: 300;
-
   margin-bottom: 400px;
-
   color: var(--white);
-
 }
+
 .carousel-inner {
   height: 90vh;
 }
@@ -135,7 +147,7 @@ import AcadFooter from '../components/AcadFooter.vue'
   min-height: 100vh;
   background-color: var(--primary);
   align-content: center;
-  color: #fefefe;
+  color: var(--white);
 }
 
 #atividades ul {
