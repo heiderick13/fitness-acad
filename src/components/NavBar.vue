@@ -1,7 +1,32 @@
 <script>
-// import { RouterLink } from 'vue-router'
+import { RouterLink, useRoute } from 'vue-router';
+import { User } from "@/model/User";
+import router from "@/router";
+
+//let usuario = new User();
+
 export default {
     name: 'NavBar',
+    data() {
+        return {
+            usuario: new User()
+        }
+    },
+    methods: {
+        getUser() {
+            let user = JSON.parse(sessionStorage.getItem("user"))
+            this.usuario = (typeof user == 'undefined' || user == null) ? null : user;
+        },
+        logoff() {
+            sessionStorage.clear();
+            //sessionStorage.setItem("user", null);
+            this.usuario = null;
+            this.$router.push("/");
+        }
+    },
+    mounted() {
+        this.getUser();
+    }
 }
 </script>
 

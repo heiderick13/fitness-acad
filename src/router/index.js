@@ -27,12 +27,13 @@ const router = createRouter({
       name: "atividades",
       component: () => import("../views/Atividades.vue"),
     },
-    {
-      path: "/Esporte/Esporte",
-      name: "Esporte-Esporte",
-      component: () => import("../views/Esportes.vue"),
-    },
-  ],
-});
 
-export default router;
+    {
+      path: '/user/enter',
+      name: 'user-login',
+      component: () => import('../views/UserLogin.vue')
+    }
+  ]
+})
+
+export default router
