@@ -1,6 +1,7 @@
 <script setup>
 import NavBar from '../components/NavBar.vue';
-import AcadFooter from '../components/AcadFooter.vue'
+import AcadFooter from '../components/AcadFooter.vue';
+import BtnScroll from '../components/BtnScroll.vue';
 
 // export default {
 //   components: { NavBar }
@@ -101,29 +102,12 @@ import AcadFooter from '../components/AcadFooter.vue'
   </section>
 
   <AcadFooter></AcadFooter>
-  <span id="top-btn"> <i class="bi bi-chevron-up"></i> </span>
+  <BtnScroll></BtnScroll>
 </template>
 
 <style scoped>
 html {
   scroll-behavior: smooth;
-}
-
-#top-btn {
-  position: fixed;
-  right: 2%;
-  bottom: 1%;
-  font-size: 28px;
-  border: none;
-  background-color: var(--light-pink);
-  padding: 1rem;
-  clip-path: circle();
-  opacity: .6;
-  cursor: pointer;
-}
-
-#top-btn:hover {
-  opacity: 1;
 }
 
 .carousel-caption h5 {
