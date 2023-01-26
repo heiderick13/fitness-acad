@@ -1,8 +1,33 @@
 <script>
 import AcadFooter from '../components/AcadFooter.vue';
+import userService from '../service/userService';
 export default {
     components: { AcadFooter },
-}
+    data() {
+        return { user: {
+            email: "", senha:""
+        }}
+    },
+    methods: {
+        entrar() {
+            userService.login(this.user)
+            .then((res) => {
+                    console.log(res.data);
+                    sessionStorage.setItem("user", JSON.stringify(res.data));
+                    this.$router.push("/");
+                    this.$router.go();
+                    alert("Usuário logado!");
+                })
+                .catch((error) => {
+                    console.log(error);
+                    alert("Erro ao tentar entrar!");
+                });
+        }
+        }
+    }
+
+
+
 
 </script>
 
@@ -14,16 +39,16 @@ export default {
             <div class="form-group">
                 <label for="loginEmail">Email</label>
                 <input type="email" placeholder="email@email.com"
-                    class="form-control">
+                    class="form-control" v-model="user.email">
             </div>
             <div class="form-group">
                 <label for="loginPass">Senha</label>
-                <input type="email" placeholder="*******" class="form-control">
+                <input type="password" placeholder="*******" class="form-control" v-model="user.senha">
             </div>
             <div class="mx-auto my-2">
-                <button type="button" class="btn  mx-2">
+                <RouterLink type="button" class="btn  mx-2" @click="entrar()" to="/">
                     Login
-                </button>
+                </RouterLink>
                 <RouterLink type="button" class="btn  mx-2"
                     to="/">
                     Voltar
