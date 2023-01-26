@@ -47,7 +47,7 @@ export default {
 
         <div class="form-group">
             <label for="">Senha</label>
-            <input type="password" name="senha" class=" form-control" placeholder="" aria-describedby="helpPass"
+            <input type="password" name="senha" class=" form-control" placeholder="*******" aria-describedby="helpPass"
                 v-model="user.senha" />
             <small id="helpPass" class="text-muted"></small>
         </div>

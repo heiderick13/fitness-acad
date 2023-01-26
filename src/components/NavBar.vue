@@ -1,12 +1,37 @@
 <script>
-// import { RouterLink } from 'vue-router'
 export default {
     name: 'NavBar',
+    data() {
+        return {usuarioperfil:{}, rerender: 0 }
+    },
+    methods: {
+        //perfil 0 = cliente, perfil 1 = funcionario, perfil null = deslogado
+        getUser() {
+            try{
+                let userjson = JSON.parse(sessionStorage.getItem("user"));
+                this.usuarioperfil = userjson == null ?  null :
+                userjson.perfil
+                // this.rerender++
+            }catch(error) {
+                return error
+            } 
+            
+        },
+        sair() {
+            sessionStorage.clear()
+            this.usuarioperfil == null
+            this.$router.go()
+        }
+    },
+    mounted() {
+        this.getUser()
+    }
 }
 </script>
 
 <template>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- :key="rerender" -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
         <div class="container">
             <RouterLink class="navbar-brand" to="/">Fitness</RouterLink>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -16,9 +41,7 @@ export default {
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <!-- <li class="nav-item">
-                        <RouterLink class="nav-link" aria-current="Home" to="/">Home</RouterLink>
-                    </li> -->
+            
                     <li class="nav-item">
                         <RouterLink class="nav-link" to="/about">Quem somos</RouterLink>
                     </li>
@@ -28,25 +51,35 @@ export default {
                     <li class="nav-item">
                         <RouterLink class="nav-link" to="/home/atividades">Atividades</RouterLink>
                     </li>
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                 
+                </ul>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" v-if="usuarioperfil == 0">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn" type="submit">Pesquisar</button>
+                    </form>
+
+                    <li class="nav-item">
+                        <RouterLink class="nav-link" aria-current="page" to="/user/add">Clientes</RouterLink>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
-                    </li> -->
+                        <RouterLink class="nav-link" aria-current="page" @click="sair()" to="/">Sair</RouterLink>
+                    </li>
                 </ul>
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" v-else-if="usuarioperfil == 1">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn" type="submit">Pesquisar</button>
+                    </form>
+
+                    <li class="nav-item">
+                        <RouterLink class="nav-link" aria-current="page" to="/user/add">Minha Conta</RouterLink>
+                    </li>
+                    <li class="nav-item">
+                        <RouterLink class="nav-link" aria-current="page" @click="sair()" to="/">Sair</RouterLink>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" v-else>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn" type="submit">Pesquisar</button>

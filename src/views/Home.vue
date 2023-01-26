@@ -1,8 +1,23 @@
-<script setup>
+<script>
 import NavBar from '../components/NavBar.vue';
 import AcadFooter from '../components/AcadFooter.vue';
 import BtnScroll from '../components/BtnScroll.vue';
-
+export default {
+  components: {
+    NavBar, AcadFooter, BtnScroll
+  },
+  data() {
+  return {rerender : 0}
+},
+methods: {
+  forceRerender() {
+ this.rerender++
+    }
+  },
+  mounted() {
+    this.forceRerender()
+  }
+}
 // export default {
 //   components: { NavBar }
 // }
@@ -10,7 +25,7 @@ import BtnScroll from '../components/BtnScroll.vue';
 </script>
 
 <template>
-  <NavBar></NavBar>
+  <NavBar :key="rerender"></NavBar>
   <section>
 
     <div id="carouselExample" class="carousel slide">

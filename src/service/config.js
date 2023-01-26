@@ -1,9 +1,8 @@
 import axios from "axios";
 
 const configure = {
-    //local: location.origin.replace(location.port, ""),
-    //local: "http://localhost:8000/projetos/projetoIntegrador/fitness-acad/api/index.php"
-    local: "http://rafaelcabral26.gratisphphost.info/api/index.php"
+    local:"http://localhost:3000/"
+
 };
 
 const http = axios.create({
@@ -11,7 +10,7 @@ const http = axios.create({
     headers: {
         'Access-Control-Allow-Origin': '*',
         //'Access-Control-Allow-Methods': '*',
-        'Access-Control-Allow-Headers': '*',
+        //'Access-Control-Allow-Headers': '*',
         'Content-Type': 'application/json;charset=utf-8',
     }
 });
