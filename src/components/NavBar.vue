@@ -5,7 +5,7 @@ export default {
         return {usuarioperfil:{}, rerender: 0 }
     },
     methods: {
-        //perfil 0 = cliente, perfil 1 = funcionario, perfil null = deslogado
+        //perfil 0 = funcionario, perfil 1 = cliente, perfil null = deslogado
         getUser() {
             try{
                 let userjson = JSON.parse(sessionStorage.getItem("user"));
@@ -45,9 +45,9 @@ export default {
                     <li class="nav-item">
                         <RouterLink class="nav-link" to="/about">Quem somos</RouterLink>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <RouterLink class="nav-link" to="/Esporte/Esporte">Esporte</RouterLink>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <RouterLink class="nav-link" to="/home/atividades">Atividades</RouterLink>
                     </li>
@@ -60,7 +60,7 @@ export default {
                     </form>
 
                     <li class="nav-item">
-                        <RouterLink class="nav-link" aria-current="page" to="/user/add">Clientes</RouterLink>
+                        <RouterLink class="nav-link" aria-current="page" to="/func/list">Clientes</RouterLink>
                     </li>
                     <li class="nav-item">
                         <RouterLink class="nav-link" aria-current="page" @click="sair()" to="/">Sair</RouterLink>
