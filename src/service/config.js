@@ -3,7 +3,7 @@ import axios from "axios";
 const server = import.meta.env.VITE_SERVER_URI
 const configure = {
      local:"http://localhost:3000/"
-    //local:import.meta.env.VITE_SERVER_URI
+    // local:import.meta.env.VITE_SERVER_URI
 
 };
 

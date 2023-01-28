@@ -39,7 +39,7 @@ const router = createRouter({
       component: () => import("../views/FuncionarioClientes.vue")
     },
     {
-      path:"/user/info",
+      path:"/user/info/:id",
       name:"infoUsuario",
       component: () => import("../views/FuncionarioPlanilha.vue")
     }

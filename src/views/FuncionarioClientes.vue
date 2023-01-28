@@ -7,24 +7,24 @@ export default {
         NavBar
     },
     data() {
-        return { usuarios: [], usuario: {}}
+        return { usuarios: []}
     },
     methods: {
         todosUsuarios() {
             userService.list()
             .then(res => {
+                const user  = JSON.parse(sessionStorage.getItem("user"));
+                if(user.perfil != 0) {
+                    return alert("Sem Acesso!")
+                }
                 this.usuarios = res.data
-                
             })
             .catch(error => {
                 console.log(error)
             })
         },
         escolherUsuario(id) {
-            this.usuario = id;
-            console.log(this.usuario);
-            sessionStorage.setItem("tempuser", this.usuario)
-            this.$router.push("/user/info")
+            this.$router.push("/user/info/" + id )
         }
     },
     mounted() {
@@ -43,7 +43,6 @@ export default {
 <div class="list-group mx-auto" v-for="user in usuarios" :key="user"> 
   <button type="button" class="list-group-item list-group-item-action" @click="escolherUsuario(user._id)">Nome : {{ user.nome}}</button>
 </div>
-
 
 </template>
 

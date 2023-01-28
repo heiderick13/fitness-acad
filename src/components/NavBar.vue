@@ -20,7 +20,7 @@ export default {
         sair() {
             sessionStorage.clear()
             this.usuarioperfil == null
-            this.$router.go()
+            this.$router.push("/")
         }
     },
     mounted() {
