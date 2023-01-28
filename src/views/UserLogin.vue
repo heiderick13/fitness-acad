@@ -16,7 +16,7 @@ export default {
                     sessionStorage.setItem("user", JSON.stringify(res.data));
                     this.$router.push("/");
                     this.$router.go();
-                    alert("Usuário logado!");
+                    console.log("Logado!")
                 })
                 .catch((error) => {
                     console.log(error);
