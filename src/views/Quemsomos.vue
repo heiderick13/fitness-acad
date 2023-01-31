@@ -2,9 +2,7 @@
 import NavBar from '../components/NavBar.vue';
 import AcadFooter from '../components/AcadFooter.vue';
 
-// export default {
-//   components: { NavBar }
-// }
+
 
 </script>
 <template>

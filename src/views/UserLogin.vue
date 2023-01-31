@@ -1,62 +1,69 @@
 <script>
-import NavBar from '@/components/NavBar.vue';
-import userService from '@/service/userService';
-
+import AcadFooter from '../components/AcadFooter.vue';
+import userService from '../service/userService';
 export default {
-    components: { NavBar },
+    components: { AcadFooter },
     data() {
         return {
-            usuario: {
-                email: "",
-                pass: ""
+            user: {
+                email: "", senha: ""
             }
         }
     },
     methods: {
         entrar() {
-            userService.logon(this.usuario)
+            userService.login(this.user)
                 .then((res) => {
                     console.log(res.data);
                     sessionStorage.setItem("user", JSON.stringify(res.data));
-                    alert("Usuario logado!");
                     this.$router.push("/");
+                    this.$router.go();
+                    console.log("Logado!")
                 })
                 .catch((error) => {
                     console.log(error);
-                    alert("Erro ao fazer ao entrar!");
+                    alert("Erro ao tentar entrar!");
                 });
         }
     }
 }
+
+
+
+
 </script>
 
 <template>
-    <NavBar></NavBar>
     <section class="container">
-        <h2 class="text-center">Entrar</h2>
-        <div class="d-flex flex-column  align-items-stretch justify-content-center">
-            <div class="mb-3">
-                <label for="staticEmail" class="">Email</label>
-                <div class="">
-                    <input type="text" class="form-control" id="staticEmail" placeholder="email@example.com"
-                        v-model="usuario.email">
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="inputPassword" class="">Password</label>
-                <div class="">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="*******"
-                        v-model="usuario.pass">
-                </div>
-            </div>
+        <div class="d-flex flex-column bg-light mwidth mx-auto">
 
-            <div class="mb-3">
-                <button type="button" class="btn btn-primary" @click="entrar()"> Entrar </button>
+            <h2 class="text-center mt-3">Login</h2>
+            <div class="form-group">
+                <label for="loginEmail">Email</label>
+                <input type="email" placeholder="email@email.com" class="form-control" v-model="user.email">
+            </div>
+            <div class="form-group">
+                <label for="loginPass">Senha</label>
+                <input type="password" placeholder="*******" class="form-control" v-model="user.senha">
+            </div>
+            <div class="mx-auto my-2">
+                <RouterLink type="button" class="btn  mx-2" @click="entrar()" to="/">
+                    Login
+                </RouterLink>
+                <RouterLink type="button" class="btn  mx-2" to="/">
+                    Voltar
+                </RouterLink>
             </div>
         </div>
     </section>
+    <AcadFooter></AcadFooter>
 </template>
 
 <style scoped>
-
-</style>
+.container {
+    margin-top: 100px;
+    margin-bottom: 35vh;
+}
+.mwidth {
+    max-width: 520px;
+}

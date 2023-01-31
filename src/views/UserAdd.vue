@@ -14,7 +14,14 @@ export default {
     },
     methods: {
         cadastro() {
-            userService.add(this.user);
+            userService.add(this.user)
+            .then(res => {
+                    console.log(res.data);
+                    alert("Cadastrado!");
+                    this.$router.push("/");
+                }).catch(error => {
+                    alert(error.data);
+                });
         }
     }
 }
@@ -22,7 +29,7 @@ export default {
 
 <template>
     <NavBar></NavBar>
-    <section class="container bg-light">
+    <section class="d-flex flex-column m-3 bg-light mwidth mx-auto">
         <h2>Cadastro</h2>
         <div class="form-group">
             <label for="">Nome</label>
@@ -40,7 +47,7 @@ export default {
 
         <div class="form-group">
             <label for="">Senha</label>
-            <input type="password" name="senha" class=" form-control" placeholder="" aria-describedby="helpPass"
+            <input type="password" name="senha" class=" form-control" placeholder="*******" aria-describedby="helpPass"
                 v-model="user.senha" />
             <small id="helpPass" class="text-muted"></small>
         </div>
@@ -65,19 +72,30 @@ export default {
             <small id="helpCPF" class="text-muted"></small>
         </div>
 
-        <div class="mb-3">
-            <button type="button" class="btn btn-primary mx-1" @click="cadastro()">
+        <div class="mx-auto m-2">
+            <button type="button" class="btn mx-2" @click="cadastro()">
                 Cadastrar
             </button>
-            <button type="button" class="btn btn-danger">
+            <button type="button" class="btn mx-2">
                 Sair
             </button>
         </div>
-        <!-- Mostrar o conteúdo da  variável "{{ }}" -->
-        <!-- {{ user.nome }} - {{ user.email }} -->
     </section>
 </template>
 
 <style scoped>
-
+.mwidth {
+    max-width: 520px;
+}
+.form-control:focus{
+    border-color: var(--primary);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px var(--primary);
+}
+.btn {
+    border-color:var(--primary);
+}
+.btn:hover {
+    color:var(--white);
+    background-color: var(--primary);
+}
 </style>

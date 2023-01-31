@@ -1,0 +1,13 @@
+:root {
+  --primary: #472d9d;
+  --secondary: #ffa41c;
+  --light-pink: #e7e7e7;
+  --light-green: #519872;
+  --white: #fefefe;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
