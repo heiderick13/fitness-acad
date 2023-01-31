@@ -9,7 +9,7 @@ export default {
     <!-- :key="rerender" -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <RouterLink class="navbar-brand" to="/">O velho maromba</RouterLink>
+            <RouterLink class="navbar-brand" to="/">FitCad</RouterLink>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -34,7 +34,7 @@ export default {
                         <RouterLink class="nav-link" aria-current="page" @click="sair()" to="/">Sair</RouterLink>
                     </li>
                 </ul>
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" v-else-if="usuarioperfil == 1">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn" type="submit">Pesquisar</button>
@@ -47,19 +47,7 @@ export default {
                         <RouterLink class="nav-link" aria-current="page" @click="sair()" to="/">Sair</RouterLink>
                     </li>
                 </ul>
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-                    </form>
 
-                    <li class="nav-item">
-                        <RouterLink class="nav-link" aria-current="page" to="/user/add">Cadastro</RouterLink>
-                    </li>
-                    <li class="nav-item">
-                        <RouterLink class="nav-link" aria-current="page" to="/user/login">Entrar</RouterLink>
-                    </li>
-                </ul>
             </div>
         </div>
     </nav>
