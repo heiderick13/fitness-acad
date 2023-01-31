@@ -30,7 +30,7 @@ const router = createRouter({
     {
       path: "/Esporte/Esporte",
       name: "Esporte-Esporte",
-      component: () => import("../views/Esportes.vue"),
+      component: () => import("../views"),
     },
   ],
 });
