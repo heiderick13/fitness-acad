@@ -79,7 +79,7 @@ div.professor {
 }
 
 section.academia {
-  background-color: #734d1c;
+  background-color: #202020;
   color: white;
   padding: 50px;
 

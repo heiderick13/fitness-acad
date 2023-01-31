@@ -27,9 +27,7 @@ export default {
                     <li class="nav-item">
                         <RouterLink class="nav-link" to="/home/atividades">Atividades</RouterLink>
                     </li>
-                    <li class="nav-item">
-                        <RouterLink class="nav-link" to="/Esporte/Esporte">Esporte</RouterLink>
-                    </li>
+
                     <li class="nav-item">
                         <RouterLink class="nav-link" aria-current="page" @click="sair()" to="/">Sair</RouterLink>
                     </li>
