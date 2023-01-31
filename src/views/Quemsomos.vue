@@ -18,8 +18,8 @@ import AcadFooter from '../components/AcadFooter.vue';
       estima para poder cuida da sua saúde, temos diverças modalidade pra executar.
     </p>
     <P>
-      Temos também varios professores muito bem capacitado para poder dar auxilior para o valor , para que ele venha ter
-      um otimo resuldado
+      Temos também varios professores muito bem capacitado para poder dar auxilio para o aluno , para que ele venha ter
+      um otimo resultado
     </P>
   </section>
 
