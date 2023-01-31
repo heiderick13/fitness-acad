@@ -7,11 +7,11 @@ export default {
     NavBar, AcadFooter, BtnScroll
   },
   data() {
-  return {rerender : 0}
-},
-methods: {
-  forceRerender() {
- this.rerender++
+    return { rerender: 0 }
+  },
+  methods: {
+    forceRerender() {
+      this.rerender++
     }
   },
   mounted() {
@@ -115,6 +115,8 @@ methods: {
       </li>
     </ul>
   </section>
+
+  <p>Olá!</p>
 
   <AcadFooter></AcadFooter>
   <BtnScroll></BtnScroll>

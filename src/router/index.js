@@ -33,6 +33,16 @@ const router = createRouter({
       name: "/user/login",
       component: () => import("../views/UserLogin.vue"),
     },
+    {
+      path:"/func/list",
+      name:"listaUsuarios",
+      component: () => import("../views/FuncionarioClientes.vue")
+    },
+    {
+      path:"/user/info/:id",
+      name:"infoUsuario",
+      component: () => import("../views/FuncionarioPlanilha.vue")
+    }
   ],
 });
 

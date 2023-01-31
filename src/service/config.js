@@ -1,7 +1,9 @@
 import axios from "axios";
 
+const server = import.meta.env.VITE_SERVER_URI
 const configure = {
-    local:"http://localhost:3000/"
+     local:"http://localhost:3000/"
+    // local:import.meta.env.VITE_SERVER_URI
 
 };
 
@@ -15,12 +17,12 @@ const http = axios.create({
     }
 });
 
-// http.interceptors.request.use(
-//     function (config) {
-//         let user = sessionStorage.getItem('usuario');
-//         config.headers.Authorization = (user != null && user.token != null) ? "Bearer " + user.token : '';
-//         return config;
-//     }
-// );
+http.interceptors.request.use(
+    function (config) {
+        let usuario = JSON.parse(sessionStorage.getItem('user'));
+        config.headers.Authorization = (usuario != null && usuario.token != null) ? "Bearer " + usuario.token : '';
+        return config;
+    }
+);
 
 export default http;
