@@ -1,7 +1,23 @@
-<script setup>
+<script>
 import NavBar from '../components/NavBar.vue';
-import AcadFooter from '../components/AcadFooter.vue'
-
+import AcadFooter from '../components/AcadFooter.vue';
+import BtnScroll from '../components/BtnScroll.vue';
+export default {
+  components: {
+    NavBar, AcadFooter, BtnScroll
+  },
+  data() {
+  return {rerender : 0}
+},
+methods: {
+  forceRerender() {
+ this.rerender++
+    }
+  },
+  mounted() {
+    this.forceRerender()
+  }
+}
 // export default {
 //   components: { NavBar }
 // }
@@ -9,7 +25,7 @@ import AcadFooter from '../components/AcadFooter.vue'
 </script>
 
 <template>
-  <NavBar></NavBar>
+  <NavBar :key="rerender"></NavBar>
   <section>
 
     <div id="carouselExample" class="carousel slide">
@@ -34,7 +50,7 @@ import AcadFooter from '../components/AcadFooter.vue'
             <h5>Quem Somos?</h5>
             <p>Uma Acadeia Voltada Para Aumentar seu Desempenho! </p>
           </div>
-          
+
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -101,32 +117,29 @@ import AcadFooter from '../components/AcadFooter.vue'
   </section>
 
   <AcadFooter></AcadFooter>
+  <BtnScroll></BtnScroll>
 </template>
 
 <style scoped>
-.carousel-caption h5 {
-
-  font-size: 60px;
-
-  margin-bottom: 30px;
-
-  color: var(--secondary); 
-
+html {
+  scroll-behavior: smooth;
 }
 
-
+.carousel-caption h5 {
+  font-size: 60px;
+  margin-bottom: 30px;
+  color: var(--secondary);
+}
 
 .carousel-caption p {
-
   font-size: 35px;
-
   font-weight: 300;
 
-  margin-bottom: 500px;
+  margin-bottom: 400px;
 
   color: var(--white);
-
 }
+
 .carousel-inner {
   height: 90vh;
 }
@@ -135,7 +148,7 @@ import AcadFooter from '../components/AcadFooter.vue'
   min-height: 100vh;
   background-color: var(--primary);
   align-content: center;
-  color: #fefefe;
+  color: var(--white);
 }
 
 #atividades ul {

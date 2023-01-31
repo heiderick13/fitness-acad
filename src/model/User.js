@@ -8,6 +8,7 @@ export class User {
         senha = "",
         telefone = "",
         data_nasc = null,
+        perfil = Boolean,
         ativo = true
     ) {
         this.id_usuario = id_usuario;
@@ -18,6 +19,7 @@ export class User {
         this.senha = senha;
         this.telefone = telefone;
         this.data_nasc = data_nasc;
+        this.perfil = perfil;
         this.ativo = ativo;
     }
 

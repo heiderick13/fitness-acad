@@ -5,15 +5,17 @@ export default {
 }
 </script>
 
-<template class="fixed-bottom">
+<template>
+
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 
 <footer>    
         <div id="footerContainer">
+
             <div id="footerLogo">
-               <h2 id="logo">FITNESS</h2>
+               <h2 id="logo">Fitness</h2>
             </div>
 
             <div id="footerMap">
@@ -26,15 +28,11 @@ export default {
                     <li>Av taltaltal nº 777</li>
                     <li>Chapa Quente - RJ</li>
                     <li id="br">Brasil</li>
+                    <li><i class="fa-solid fa-square-phone"><b>(21) 99999-9999</b></i></li>           
                 </ul>
             </div>
-        </div>
-
-        <div id="footerFone">
-           <li><i class="fa-solid fa-square-phone"></i></li>
-           <li><b>(21) 99999-9999</b></li>
-        </div>
-
+        </div>        
+        
         <div id="socialMedia">
             <ul>                
                 <RouterLink class="footerLink" to="#"><i class="fa-brands fa-facebook-f"></i></RouterLink>
@@ -43,12 +41,20 @@ export default {
                 <RouterLink class="footerLink" to="#"><i class="fa-brands fa-youtube"></i></RouterLink>
             </ul>            
         </div>
+        
     </footer>
+
 </template>
 
 <style scoped>
     
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Poppins:wght@400;500&family=Prosto+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 li {
     list-style: none;
@@ -68,13 +74,13 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     padding: 0 7px;
-    border-top: 3px solid var(--secondary);        
+    border-top: 2px solid var(--secondary);        
 }
 
 #footerLogo {
     text-align: center;
-    padding: 70px 0 30px 0;
-    margin-bottom: 30px;
+    padding: 70px 0;
+    margin: 0 100px;
     color: var(--secondary);
 }
 
@@ -85,7 +91,7 @@ footer {
 }
 
 #footerMap {
-    margin-bottom: 30px;
+    margin: 0 30px;
 }
 
 #footerMap img {
@@ -101,8 +107,7 @@ footer {
     display: flex;
     flex-direction:row;
     align-items: flex-start;
-    padding-bottom: 5px;
-    margin-top: 35px;
+    padding: 70px 0;
     color:var(--secondary);
 }
 
@@ -118,21 +123,9 @@ footer {
     text-shadow: 1px 1px 1px #000;
 }
 
-#footerFone { 
-    background-color: transparent;
-    display: flex;
-    font-size: 0.8rem;
-    align-items: center;
-    justify-content: center;
-    padding-left: 120px;
-    padding-bottom: 30px; 
-    color: var(--secondary);
-    gap: 5px;
-    text-shadow: 1px 1px 1px #000;   
-}
-
-#footerFone:nth-child(2){
+#footerInfo b {
     font-family: 'Prosto One', cursive;
+    padding-left: 5px;
 }
 
 #socialMedia {
@@ -151,11 +144,9 @@ footer {
     gap: 60px;
     font-size: 1.5rem;
 }
-
 .footerLink {
     text-decoration: none;   
     color: var(--primary);    
-    padding-top: 15px;      
 }
 .footerLink:hover {
     cursor: pointer;
@@ -166,126 +157,89 @@ footer {
 @media screen and (min-width: 700px) {
     
     #footerContainer {    
-        justify-content: none;
+        justify-content: center;
+        align-items: center;
         padding: 0 5px;
-        gap: 5px;            
+        gap: 20px;            
     }
 
-    #footerLogo {
+    #footerLogo {        
         text-align: left;
-        padding: 40px 85px 0 0;        
+        padding:0 70px 170px 0; 
+        margin: 0 0 0 20px;        
     }
 
     #footerMap {
+        margin: 0;
         max-width: 250px;
-        padding-top: 80px;               
+        padding: 70px 0;
     }   
 
     #footerData {
         flex-direction:column;
         align-items: flex-start;
-        padding: 58px 0px 0 80px;
+        padding-left: 25px;
+        margin-left: 20px;
     }
 
     #footerData h3{
         padding-bottom: 15px;        
-    }
-
-    #footerFone {
-        position: absolute;      
-        justify-content: flex-end;
-        bottom: 174px;
-        right: 50px;
-        padding: 0;
-        margin: 0;        
-    }
-
-    #socialMedia {
-        margin-top: 55px;
-    }
+    }    
 }
 
 @media screen and (min-width: 815px) {
 
-    #footerFone {      
-        right: 78px;
-        bottom: 184px;
+    #footerLogo {
+        text-align: right;
+        padding: 0 0 170px 0;        
     }
+
+    #footerMap {
+        margin-right: 15px;
+    }    
 }
 
 @media screen and (min-width: 900px) {
 
-    #footerLogo {
-        padding: 40px 120px 0 0;        
-    }
-
-    #footerFone {      
-        padding: 0 103px 20px 0;              
-    }
-
-    #footerData h3{
-        padding: 30px 0px 25px 90px;
-    }
-
-    #footerInfo {
-        padding-left: 90px;
+    #footerMap {
+        margin-right: 30px;
     }
 }
 
-@media screen and (min-width: 1200px) {
-
-    footer{
-        position: relative;
-    }
+@media screen and (min-width: 1000px) {
 
     #footerContainer {    
-        justify-content: space-between;
+        justify-content: space-around;
         padding: 0 10px;
         margin: 0;            
     }
 
     #footerLogo {
-        text-align: left;
-        padding: 25px 0px 0 150px;        
+        margin: 0 120px 0 0;
+        text-align: center;
+        padding-left: 30px;                
     }
 
     #footerMap {
         order: 3;
-        padding: 30px 0;
-        margin-right: 100px;
-        max-width: 235px;
-        padding-bottom: 0;
+        margin: 0;        
     }
     
     #footerData {
-        position: absolute;
+        padding: 0;
+        margin: 0;
         order: 2;
-        align-items: flex-end;
-        bottom: 110px;
-        right: 470px;        
-    }
-
-    #footerData h3{
-        padding-right: 40px;
-        padding: 0 40px 5px;               
-    }    
+        align-items: flex-start;              
+    }   
 
     #footerInfo {
         padding: 0;
         margin: 0;
         font-size: 0.8rem;                              
-    }
-
-    #footerFone {
-        font-size: 0.8rem;
-        padding: 0;  
-        position: absolute;    
-        bottom: 85px;
-        right: 458px;        
-    }
-
-    #socialMedia {
-        margin-top: 0;
+    }  
+    
+    #br {
+        padding-bottom: 10px;
     }
 }
 </style>
