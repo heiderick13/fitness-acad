@@ -16,8 +16,5 @@ export default {
     get: function (id) {
         return http.get("/usuario/" + id);
     }
-   
-    
-
 
 }

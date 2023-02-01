@@ -42,6 +42,11 @@ const router = createRouter({
       path:"/user/info/:id",
       name:"infoUsuario",
       component: () => import("../views/FuncionarioPlanilha.vue")
+    },
+    {
+      path:"/func/criarplanilha",
+      name:"criarplanilha",
+      component: () => import("../views/CriarPlanilha.vue")
     }
   ],
 });

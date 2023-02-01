@@ -3,7 +3,7 @@ import NavBar from '../components/NavBar.vue';
 import { User } from '../model/User.js';
 import userService from '@/service/userService'
 
-var user = new User(); //Criando um objeto do tipo User (Classe)
+var user = new User();
 
 export default {
     components: { NavBar },

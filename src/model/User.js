@@ -9,6 +9,7 @@ export class User {
         telefone = "",
         data_nasc = null,
         perfil = Boolean,
+        planilha = "",
         ativo = true
     ) {
         this.id_usuario = id_usuario;
@@ -20,6 +21,7 @@ export class User {
         this.telefone = telefone;
         this.data_nasc = data_nasc;
         this.perfil = perfil;
+        this.planilha = planilha;
         this.ativo = ativo;
     }
 

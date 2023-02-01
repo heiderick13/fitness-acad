@@ -68,9 +68,9 @@ export default {
                 </li>
             </ul>
             <div class="mx-auto">
-                <button type="button" class="btn m-2 border" to="/">
+                <RouterLink type="button" class="btn m-2 border" to="/func/criarplanilha">
                     Criar Planilha
-                </button>
+                </RouterLink>
                 <button type="button" class="btn m-2 border" to="/">
                     Atualizar Planilha
                 </button>
