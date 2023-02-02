@@ -4,8 +4,9 @@ import NavBar from '../components/NavBar.vue';
 import userService from '../service/userService';
 export default {
     components: {
-        NavBar
-    },
+    NavBar,
+    AcadFooter
+},
     data() {
         return { usuarios: []}
     },
@@ -43,7 +44,6 @@ export default {
 <div class="list-group mx-auto" v-for="user in usuarios" :key="user"> 
   <button type="button" class="list-group-item list-group-item-action" @click="escolherUsuario(user._id)">Nome : {{ user.nome}}</button>
 </div>
-
 </template>
 
 <style scoped>

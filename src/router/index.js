@@ -22,11 +22,32 @@ const router = createRouter({
       name: "user-add",
       component: () => import("../views/UserAdd.vue"),
     },
-    // {
-    //   path: "/home/atividades",
-    //   name: "atividades",
-    //   component: () => import("../views/Atividades.vue"),
-    // },
+    {
+      path: "/home/atividades",
+      name: "atividades",
+      component: () => import("../views/Atividades.vue"),
+    },
+
+    {
+      path: "/user/login",
+      name: "/user/login",
+      component: () => import("../views/UserLogin.vue"),
+    },
+    {
+      path: "/func/list",
+      name: "listaUsuarios",
+      component: () => import("../views/FuncionarioClientes.vue"),
+    },
+    {
+      path: "/user/info/:id",
+      name: "infoUsuario",
+      component: () => import("../views/FuncionarioPlanilha.vue"),
+    },
+    {
+      path: "/func/criarplanilha",
+      name: "criarplanilha",
+      component: () => import("../views/CriarPlanilha.vue"),
+    },
   ],
 });
 
