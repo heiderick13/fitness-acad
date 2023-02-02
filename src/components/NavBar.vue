@@ -43,13 +43,13 @@ export default {
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                     <li class="nav-item">
-                        <RouterLink class="nav-link" to="/about">Quem somos</RouterLink>
+                        <a class="nav-link" href="#quem-somos">Quem somos</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <RouterLink class="nav-link" to="/Esporte/Esporte">Esporte</RouterLink>
-                    </li> -->
                     <li class="nav-item">
-                        <RouterLink class="nav-link" to="/home/atividades">Atividades</RouterLink>
+                        <a class="nav-link" href="#atividades">Atividades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#professores">Nossos Professores</a>
                     </li>
 
                 </ul>
