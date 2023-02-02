@@ -2,20 +2,20 @@
 export default {
     name: 'NavBar',
     data() {
-        return {usuarioperfil:{}, rerender: 0 }
+        return { usuarioperfil: {}, rerender: 0 }
     },
     methods: {
         //perfil 0 = funcionario, perfil 1 = cliente, perfil null = deslogado
         getUser() {
-            try{
+            try {
                 let userjson = JSON.parse(sessionStorage.getItem("user"));
-                this.usuarioperfil = userjson == null ?  null :
-                userjson.perfil
+                this.usuarioperfil = userjson == null ? null :
+                    userjson.perfil
                 // this.rerender++
-            }catch(error) {
+            } catch (error) {
                 return error
-            } 
-            
+            }
+
         },
         sair() {
             sessionStorage.clear()
@@ -31,7 +31,7 @@ export default {
 
 <template>
     <!-- :key="rerender" -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <RouterLink class="navbar-brand" to="/">Fitness</RouterLink>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -41,17 +41,17 @@ export default {
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            
+
                     <li class="nav-item">
-                        <RouterLink class="nav-link" to="/about">Quem somos</RouterLink>
+                        <a class="nav-link" href="#quem-somos">Quem somos</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <RouterLink class="nav-link" to="/Esporte/Esporte">Esporte</RouterLink>
-                    </li> -->
                     <li class="nav-item">
-                        <RouterLink class="nav-link" to="/home/atividades">Atividades</RouterLink>
+                        <a class="nav-link" href="#atividades">Atividades</a>
                     </li>
-                 
+                    <li class="nav-item">
+                        <a class="nav-link" href="#professores">Nossos Professores</a>
+                    </li>
+
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0" v-if="usuarioperfil == 0">
                     <form class="d-flex" role="search">
@@ -99,16 +99,17 @@ export default {
 
 <style scoped>
 .btn {
-    color:var(--white);
-    border-color:var(--white);
+    color: var(--white);
+    border-color: var(--white);
 }
 
 .form-control:focus {
     border-color: var(--primary);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px var(--primary);
 }
+
 .btn:hover {
     background-color: var(--primary);
-    color:var(--white);
+    color: var(--white);
 }
 </style>

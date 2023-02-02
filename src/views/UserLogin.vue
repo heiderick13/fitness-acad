@@ -4,14 +4,16 @@ import userService from '../service/userService';
 export default {
     components: { AcadFooter },
     data() {
-        return { user: {
-            email: "", senha:""
-        }}
+        return {
+            user: {
+                email: "", senha: ""
+            }
+        }
     },
     methods: {
         entrar() {
             userService.login(this.user)
-            .then((res) => {
+                .then((res) => {
                     console.log(res.data);
                     sessionStorage.setItem("user", JSON.stringify(res.data));
                     this.$router.push("/");
@@ -23,8 +25,8 @@ export default {
                     alert("Erro ao tentar entrar!");
                 });
         }
-        }
     }
+}
 
 
 
@@ -38,8 +40,7 @@ export default {
             <h2 class="text-center mt-3">Login</h2>
             <div class="form-group">
                 <label for="loginEmail">Email</label>
-                <input type="email" placeholder="email@email.com"
-                    class="form-control" v-model="user.email">
+                <input type="email" placeholder="email@email.com" class="form-control" v-model="user.email">
             </div>
             <div class="form-group">
                 <label for="loginPass">Senha</label>
@@ -49,8 +50,7 @@ export default {
                 <RouterLink type="button" class="btn  mx-2" @click="entrar()" to="/">
                     Login
                 </RouterLink>
-                <RouterLink type="button" class="btn  mx-2"
-                    to="/">
+                <RouterLink type="button" class="btn  mx-2" to="/">
                     Voltar
                 </RouterLink>
             </div>
@@ -67,16 +67,3 @@ export default {
 .mwidth {
     max-width: 520px;
 }
-
-.form-control:focus {
-    border-color: var(--primary);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px var(--primary);
-}
-.btn {
-    border-color:var(--primary);
-}
-.btn:hover {
-    background-color: var(--primary);
-    color:var(--white);
-}
-</style>
