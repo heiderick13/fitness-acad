@@ -45,17 +45,13 @@ export default {
                     e.repeticoes = document.getElementById("repeticoes").value
                     document.querySelectorAll(".seriecard").forEach(ele => {
                         if (selectedSerie == ele.id) {
-                            let newDiv = document.createElement('div')
-                            console.log(newDiv)
-                            ele.innerHTML += newDiv
-                            newDiv.id = 'deleteButton' + (++counter)
-                            // newDiv.innerHTML += 
-                            // '<div class="border-end border-start px-2">' + 
-                            // '<span class="fw-light">Exercício<br></span>' + e.nome + 
-                            // '<br><span class="fw-light">Series</span><br>'+ e.series + 
-                            // '<br><span class="fw-light">Reps</span><br>'+ e.repeticoes + 
-                            // '<div type="button" class="btn btn-danger p-1 mx-2"><i class="bi bi-trash"></i></div>'
-                            // '</div>';
+                            ele.innerHTML +=
+                                '<div class="exercicio border-end border-start px-2">' +
+                                '<span class="fw-light">Exercício<br></span>' + e.nome +
+                                '<br><span class="fw-light">Series</span><br>' + e.series +
+                                '<br><span class="fw-light">Reps</span><br>' + e.repeticoes +
+                                '<div type="button" class="btn btn-danger p-1 mx-2"><i class="bi bi-trash"></i></div>'
+                            '</div>';
                         }
                     })
 
@@ -63,7 +59,7 @@ export default {
             })
         },
         deleteExerciseHTML(ele) {
-            
+
             ele.parentElement.remove()
         }
 
@@ -82,27 +78,23 @@ export default {
     <div class="container text-center">
         <div class="card1 card form-control my-5">
             <h2 class="text-center">Add Exercicios</h2>
-            <select @click="filterExercises()" id="gruposmusculares"
-                class="form-select my-2">
+            <select @click="filterExercises()" id="gruposmusculares" class="form-select my-2">
                 <option selected>Grupo Muscular</option>
                 <option value="Peitoral">Peitoral</option>
                 <option value="Costas">Costas</option>
                 <option value="Pernas">Pernas</option>
             </select>
-            <select @click="filterExercises()" class="form-select my-2"
-                id="exercicioescolhido">
+            <select @click="filterExercises()" class="form-select my-2" id="exercicioescolhido">
                 <option selected>Exercicios</option>
                 <option v-for="musculo in grupoMuscular" :key="musculo"> {{
                     musculo.nome
                 }}</option>
             </select>
             <div class="input-group my-2">
-                <input type="number" class="form-control" placeholder="Series"
-                    aria-label="series" id="series" required>
+                <input type="number" class="form-control" placeholder="Series" aria-label="series" id="series" required>
             </div>
             <div class="input-group my-2">
-                <input type="number" class="form-control"
-                    placeholder="Repeticoes" aria-label="repeticoes"
+                <input type="number" class="form-control" placeholder="Repeticoes" aria-label="repeticoes"
                     id="repeticoes" required>
             </div>
             <select id="serieEscolhida" class="form-select my-2">
@@ -114,18 +106,19 @@ export default {
                 <option id="serieselector">Serie-E</option>
                 <option id="serieselector">Serie-F</option>
             </select>
-            <button class="btn btn-primary"
-                @click="createExercisesHTML()">Adicionar</button>
+            <button class="btn btn-primary" @click="createExercisesHTML()">Adicionar</button>
         </div>
     </div>
-    <div class="d-flex">
+    <div id="corpo" class="d-flex">
         <div class="card2 card">
             <div class="d-flex seriecard my-2" id="Serie-A">
                 <div class="serie serieA badge">Serie A</div>
-            </div><hr>
+            </div>
+            <hr>
             <div class="d-flex seriecard my-2" id="Serie-B">
                 <div class="serie serieB badge">Serie B</div>
-            </div><hr>
+            </div>
+            <hr>
             <div class="d-flex seriecard my-2" id="Serie-C">
                 <div class="serie serieC badge">Serie C</div>
             </div>
@@ -134,10 +127,12 @@ export default {
         <div class="card card2">
             <div class="d-flex seriecard my-2" id="Serie-D">
                 <div class="serie serieD badge">Serie D</div>
-            </div><hr>
+            </div>
+            <hr>
             <div class="d-flex seriecard my-2" id="Serie-E">
                 <div class="serie serieE badge">Serie E</div>
-            </div><hr>
+            </div>
+            <hr>
             <div class="d-flex seriecard my-2" id="Serie-F">
                 <div class="serie serieF badge">Serie F</div>
             </div>
@@ -148,19 +143,31 @@ export default {
 
 <style scoped>
 .card1 {
-    width: 25%;
+    width: 300px;
     margin: auto;
+}
 
+.seriecard {
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.seriecard::-webkit-scrollbar {
+    display: none;
+}
+
+.exercicio {
+    min-width: 55px;
 }
 
 .card2 {
-    width: 40%;
+    width: 400px;
     margin: auto;
 
 }
 
 .serie {
-    width: 10%;
+    width: 40px;
     height: 20vh;
     background-color: var(--light-pink);
     color: var(--light-green);
@@ -168,15 +175,18 @@ export default {
     writing-mode: vertical-lr;
     text-orientation: upright;
 }
+
 .badge {
     height: auto;
 }
-#addedExercises {
-    border-left: 2px grey solid;
-    border-right: 2px grey solid;
-    padding-inline: 5px;
-}
+
 #headerExercises {
-    color:blue
+    color: blue
+}
+
+@media screen and (max-width: 800px) {
+    #corpo {
+        flex-direction: column;
+    }
 }
 </style> 

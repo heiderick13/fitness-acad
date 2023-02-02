@@ -22,11 +22,6 @@ const router = createRouter({
       name: "user-add",
       component: () => import("../views/UserAdd.vue"),
     },
-    {
-      path: "/home/atividades",
-      name: "atividades",
-      component: () => import("../views/Atividades.vue"),
-    },
 
     {
       path: "/user/login",

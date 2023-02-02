@@ -64,6 +64,22 @@ export default {
     margin-top: 100px;
     margin-bottom: 35vh;
 }
+
 .mwidth {
     max-width: 520px;
 }
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px var(--primary);
+}
+
+.btn {
+    border-color: var(--primary);
+}
+
+.btn:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+</style>
