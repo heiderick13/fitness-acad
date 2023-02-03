@@ -8,14 +8,17 @@ export default {
 <template>
 
     <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 
-<footer>    
+    <footer>
         <div id="footerContainer">
 
             <div id="footerLogo">
-               <h2 id="logo">Fitness</h2>
+                {/* <h2 id="logo">Fitness</h2> */}
+                <img src="/images/0d734645-5c49-4a84-87fe-fbae93f36a3f.png" alt="logo">
             </div>
 
             <div id="footerMap">
@@ -28,32 +31,31 @@ export default {
                     <li>Av taltaltal nº 777</li>
                     <li>Chapa Quente - RJ</li>
                     <li id="br">Brasil</li>
-                    <li><i class="fa-solid fa-square-phone"><b>(21) 99999-9999</b></i></li>           
+                    <li><i class="fa-solid fa-square-phone"><b>(21) 99999-9999</b></i></li>
                 </ul>
             </div>
-        </div>        
-        
+        </div>
+
         <div id="socialMedia">
-            <ul>                
+            <ul>
                 <RouterLink class="footerLink" to="#"><i class="fa-brands fa-facebook-f"></i></RouterLink>
                 <RouterLink class="footerLink" to="#"><i class="fa-brands fa-square-instagram"></i></RouterLink>
                 <RouterLink class="footerLink" to="#"><i class="fa-brands fa-twitter"></i></RouterLink>
                 <RouterLink class="footerLink" to="#"><i class="fa-brands fa-youtube"></i></RouterLink>
-            </ul>            
+            </ul>
         </div>
-        
+
     </footer>
 
 </template>
 
 <style scoped>
-    
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Poppins:wght@400;500&family=Prosto+One&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 li {
@@ -62,19 +64,19 @@ li {
 
 footer {
     position: relative;
-    font-family: 'Poppins', sans-serif; 
-    background: linear-gradient(rgba(71, 45, 157,0.8), rgba(0,0,0,0.8)), url("../../images/exercise-weights-iron-dumbbell-with-extra-plates.jpg");
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgba(71, 45, 157, 0.8), rgba(0, 0, 0, 0.8)), url("../../images/exercise-weights-iron-dumbbell-with-extra-plates.jpg");
     background-position: center;
-    background-size: cover; 
+    background-size: cover;
 }
 
-#footerContainer {    
+#footerContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     padding: 0 7px;
-    border-top: 2px solid var(--secondary);        
+    border-top: 2px solid var(--secondary);
 }
 
 #footerLogo {
@@ -84,10 +86,10 @@ footer {
     color: var(--secondary);
 }
 
-#logo {    
+#logo {
     font-family: 'Lora', serif;
     font-weight: 600;
-    text-shadow: 1px 1px 1px #000;    
+    text-shadow: 1px 1px 1px #000;
 }
 
 #footerMap {
@@ -100,22 +102,22 @@ footer {
     border-radius: 20px;
     box-shadow: 1px 1px 1px #000;
     max-height: 190px;
-    opacity: 0.7;    
+    opacity: 0.7;
 }
 
 #footerData {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     align-items: flex-start;
     padding: 70px 0;
-    color:var(--secondary);
+    color: var(--secondary);
 }
 
-#footerData h3{
+#footerData h3 {
     font-family: 'Prosto One', cursive;
     font-size: 1rem;
     padding-right: 25px;
-    text-shadow: 1px 1px 1px #000;            
+    text-shadow: 1px 1px 1px #000;
 }
 
 #footerInfo {
@@ -129,12 +131,12 @@ footer {
 }
 
 #socialMedia {
-    background: linear-gradient(rgba(255,164,28,0.8), rgba(0,0,0,0.8));
+    background: linear-gradient(rgba(255, 164, 28, 0.8), rgba(0, 0, 0, 0.8));
     display: flex;
     align-items: center;
     justify-content: center;
     height: 7vh;
-    width: 100%;    
+    width: 100%;
 }
 
 #socialMedia ul {
@@ -144,59 +146,61 @@ footer {
     gap: 60px;
     font-size: 1.5rem;
 }
+
 .footerLink {
-    text-decoration: none;   
-    color: var(--primary);    
+    text-decoration: none;
+    color: var(--primary);
 }
+
 .footerLink:hover {
     cursor: pointer;
-    color:var(--white);
-    transition: 0.5s;       
+    color: var(--white);
+    transition: 0.5s;
 }
 
 @media screen and (min-width: 700px) {
-    
-    #footerContainer {    
+
+    #footerContainer {
         justify-content: center;
         align-items: center;
         padding: 0 5px;
-        gap: 20px;            
+        gap: 20px;
     }
 
-    #footerLogo {        
+    #footerLogo {
         text-align: left;
-        padding:0 70px 170px 0; 
-        margin: 0 0 0 20px;        
+        padding: 0 70px 170px 0;
+        margin: 0 0 0 20px;
     }
 
     #footerMap {
         margin: 0;
         max-width: 250px;
         padding: 70px 0;
-    }   
+    }
 
     #footerData {
-        flex-direction:column;
+        flex-direction: column;
         align-items: flex-start;
         padding-left: 25px;
         margin-left: 20px;
     }
 
-    #footerData h3{
-        padding-bottom: 15px;        
-    }    
+    #footerData h3 {
+        padding-bottom: 15px;
+    }
 }
 
 @media screen and (min-width: 815px) {
 
     #footerLogo {
         text-align: right;
-        padding: 0 0 170px 0;        
+        padding: 0 0 170px 0;
     }
 
     #footerMap {
         margin-right: 15px;
-    }    
+    }
 }
 
 @media screen and (min-width: 900px) {
@@ -208,36 +212,36 @@ footer {
 
 @media screen and (min-width: 1000px) {
 
-    #footerContainer {    
+    #footerContainer {
         justify-content: space-around;
         padding: 0 10px;
-        margin: 0;            
+        margin: 0;
     }
 
     #footerLogo {
         margin: 0 120px 0 0;
         text-align: center;
-        padding-left: 30px;                
+        padding-left: 30px;
     }
 
     #footerMap {
         order: 3;
-        margin: 0;        
+        margin: 0;
     }
-    
+
     #footerData {
         padding: 0;
         margin: 0;
         order: 2;
-        align-items: flex-start;              
-    }   
+        align-items: flex-start;
+    }
 
     #footerInfo {
         padding: 0;
         margin: 0;
-        font-size: 0.8rem;                              
-    }  
-    
+        font-size: 0.8rem;
+    }
+
     #br {
         padding-bottom: 10px;
     }
