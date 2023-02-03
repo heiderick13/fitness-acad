@@ -1,35 +1,30 @@
-# lojaweb-vue
+# Academia Fitness
 
-This template should help get you started developing with Vue 3 in Vite.
+## Authors
 
-## Recommended IDE Setup
+- [@RafaelCabral26](https://github.com/RafaelCabral26)
+- [@Rafaael586](https://github.com/Rafaael586)
+- [@lthurler](https://github.com/lthurler)
+- [@amigoxd55](https://github.com/amigoxd55)
+- [@octokatherine](https://github.com/heiderick13)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## About
 
-## Customize configuration
+Page developed for a fictional gym, containing a simple landing page with basic info and a few other features including a section for clients to check their workout routine, createad individually by our trainers.
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Screenshots
 
-## Project Setup
+![Site Screenshot](./images/screenshot.png)
+![Site Screenshot](./images/screenshot1.png)
+![Site Screenshot](./images/screenshot2.png)
+![Site Screenshot](./images/screenshot3.png)
+![Site Screenshot](./images/screenshot4.png)
 
-```sh
-npm install
-```
+## Built With
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Bootstrap
+- Vuejs
