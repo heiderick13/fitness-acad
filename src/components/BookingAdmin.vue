@@ -1,69 +1,13 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-Vue.component('admin',
-{
-    template:
-<div>
-    <table class="pending">
-        <thead>
-            <tr>
-                <th>Dates</th>
-                <th>Timing</th>
-                <th>Names</th>
-                <th>Contact Numbers</th>
-                <th>Status</th>
-                <th>Updates</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr v-for="booking in bookings" v-show="booking.status == 'pending'">
-                <td>{{ booking.date }}</td>
-                <td>{{ booking.time }}</td>
-                <td>{{ booking.customerName }}</td>
-                <td>{{ booking.customerNumber }}</td>
-                <td>{{ booking.status }}</td>
-                <td>
-                <a href="javascript:;">
-                <i @click="update" :data-key=booking.unique :id=booking.status class="material-icons">autorenew</i></a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
-    <br><hr class="hrth"><br>
-
-    <table class="approved">
-        <thead>
-            <tr>
-                <th>Dates</th>
-                <th>Timing</th>
-                <th>Names</th>
-                <th>Contact Numbers</th>
-                <th>Status</th>
-                <th>Updates</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr v-for="booking in bookings" v-show="booking.status == 'approved'">
-                <td>{{ booking.date }}</td>
-                <td>{{ booking.time }}</td>
-                <td>{{ booking.customerName }}</td>
-                <td>{{ booking.customerNumber }}</td>
-                <td>{{ booking.status }}</td>
-                <td>
-                <a href="javascript:;">
-                <i @click="update" :data-key=booking.unique :id=booking.status class="material-icons">autorenew</i></a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
-</div>`,
+<script>
+export default {
+    name: 'BookingAdmin',
     data() {
         return {
             bookings: [],
             statusUpdate: ""
         }
     },
+
     methods:
     {
         update(event) {
@@ -88,7 +32,7 @@ Vue.component('admin',
         },
 
         fetcher() {
-            this.$http.get('https://agendamento-4980a-default-rtdb.firebaseio.com/agendamento.json')
+            this.$router.get('https://agendamento-4980a-default-rtdb.firebaseio.com/agendamento.json')
                 .then(function (data) {
 
                     return data.json();
@@ -105,9 +49,72 @@ Vue.component('admin',
                 })
         }
     },
+
     created() {
         this.fetcher();
     }
+}
 
+</script>
 
-});
+<template>
+    <div>
+        <table class="pending">
+            <thead>
+                <tr>
+                    <th>Dates</th>
+                    <th>Timing</th>
+                    <th>Names</th>
+                    <th>Contact Numbers</th>
+                    <th>Status</th>
+                    <th>Updates</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="booking in bookings" v-show="booking.status == 'pending'">
+                    <td>{{ booking.date }}</td>
+                    <td>{{ booking.time }}</td>
+                    <td>{{ booking.customerName }}</td>
+                    <td>{{ booking.customerNumber }}</td>
+                    <td>{{ booking.status }}</td>
+                    <td>
+                        <a href="javascript:;">
+                            <i @click="update" :data-key=booking.unique :id=booking.status
+                                class="material-icons">autorenew</i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+        <hr class="hrth"><br>
+
+        <table class="approved">
+            <thead>
+                <tr>
+                    <th>Dates</th>
+                    <th>Timing</th>
+                    <th>Names</th>
+                    <th>Contact Numbers</th>
+                    <th>Status</th>
+                    <th>Updates</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="booking in bookings" v-show="booking.status == 'approved'">
+                    <td>{{ booking.date }}</td>
+                    <td>{{ booking.time }}</td>
+                    <td>{{ booking.customerName }}</td>
+                    <td>{{ booking.customerNumber }}</td>
+                    <td>{{ booking.status }}</td>
+                    <td>
+                        <a href="javascript:;">
+                            <i @click="update" :data-key=booking.unique :id=booking.status
+                                class="material-icons">autorenew</i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</template>

@@ -58,14 +58,15 @@ export default {
                     <li class="nav-item">
                         <a class="nav-link" href="#professores">Nossos Professores</a>
                     </li>
-                    <li class="nav-item">
-                        <RouterLink class="nav-link" aria-current="page" to="/booking">agendamento</RouterLink>
-                    </li>
+
 
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0" v-if="usuarioperfil == 0">
                     <li class="nav-item">
                         <RouterLink class="nav-link" aria-current="page" to="/func/list">Clientes</RouterLink>
+                    </li>
+                    <li class="nav-item">
+                        <RouterLink class="nav-link" aria-current="page" to="/booking">agendamento</RouterLink>
                     </li>
                     <li class="nav-item">
                         <RouterLink class="nav-link" aria-current="page" @click="sair()" to="/">Sair</RouterLink>
@@ -74,6 +75,9 @@ export default {
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0" v-else-if="usuarioperfil == 1">
                     <li class="nav-item">
                         <RouterLink class="nav-link" aria-current="page" to="/user/add">Minha Conta</RouterLink>
+                    </li>
+                    <li class="nav-item">
+                        <RouterLink class="nav-link" aria-current="page" to="/booking/admin">agendamento</RouterLink>
                     </li>
                     <li class="nav-item">
                         <RouterLink class="nav-link" aria-current="page" @click="sair()" to="/">Sair</RouterLink>

@@ -42,6 +42,7 @@ export default {
                 this.notification('first-noti');
             }
         },
+
         post() {
 
             let time = document.getElementsByClassName('time')[0].value;
@@ -65,7 +66,6 @@ export default {
                         this.afterSubmit = true;
 
                     });
-
             }
         },
 
@@ -209,7 +209,6 @@ document.addEventListener('DOMContentLoaded', function () {
     position: absolute;
     top: 175px;
     right: 20px;
-    font-family: 'Kaushan Script';
     display: none;
 }
 </style>
