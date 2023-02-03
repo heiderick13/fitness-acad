@@ -18,9 +18,6 @@ export default {
     this.forceRerender()
   }
 }
-// export default {
-//   components: { NavBar }
-// }
 
 </script>
 
@@ -192,14 +189,14 @@ html {
 
 .carousel-caption h5 {
   font-size: 7vw;
-  margin-bottom: 30px;
+  /* margin-bottom: 15px; */
   color: var(--secondary);
 }
 
 .carousel-caption p {
   font-size: 3vw;
   font-weight: 300;
-  margin-bottom: 50%;
+  margin-bottom: 35%;
   color: var(--white);
 }
 
@@ -299,7 +296,7 @@ html {
   }
 
   .carousel-caption p {
-    margin-bottom: 20%;
+    margin-bottom: 25%;
   }
 
   #professores>p {
