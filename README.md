@@ -12,9 +12,13 @@
 
 Page developed for a fictional gym, containing a simple landing page with basic info and a few other features including a section for clients to check their workout routine, createad individually by our trainers.
 
-## Screenshot
+## Screenshots
 
 ![Site Screenshot](./images/screenshot.png)
+![Site Screenshot](./images/screenshot1.png)
+![Site Screenshot](./images/screenshot2.png)
+![Site Screenshot](./images/screenshot3.png)
+![Site Screenshot](./images/screenshot4.png)
 
 ## Built With
 
