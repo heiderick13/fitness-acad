@@ -171,7 +171,7 @@ export default {
 
     <div class="professores-fotos">
       <img src="../../images/boxe.jpg" alt="boxe" width="250" height="250" class="boxe">
-      <img src="../../images/baker indoor.jpg" alt="bike indoor" width="250" class="bike indoor">
+      <img src="../../images/baker-indoor.jpg" alt="bike indoor" width="250" class="bike indoor">
       <img src="../../images/jiujitsu.jpg" alt="jiujitsu" width="250" class="jiujitsu">
       <img src="../../images/musculação.jpg" alt="musculação" width="250" class="musculação">
       <img src="../../images/jump.jpg" alt="jump" width="250" class=" jump">
@@ -237,6 +237,11 @@ html {
 
 .atividade .preco_atividade {
   font-size: 1.5rem;
+}
+
+#professores>p {
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .academia {
