@@ -218,7 +218,7 @@ footer {
     }
 
     #footerLogo {
-        margin: 0 120px 0 0;
+        margin: 0 100px 0 0;
         text-align: center;
         padding-left: 30px;
     }
