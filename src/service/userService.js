@@ -7,11 +7,11 @@ export default {
         return http.post("/user/add", user)
     },
     list: function () {
-    return http.get("/user/list")
+        return http.get("/user/list")
     },
     login: (user) => {
-    const dadosLogin = { email:user.email, senha:user.senha}    
-    return http.post("/user/login", dadosLogin)
+        const dadosLogin = { email: user.email, senha: user.senha }
+        return http.post("/user/login", dadosLogin)
     },
     get: function (id) {
         return http.get("/usuario/" + id);

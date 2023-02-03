@@ -231,6 +231,7 @@ footer {
     #footerMap {
         order: 3;
         margin: 0;
+        padding: 30px 0;
     }
 
     #footerData {

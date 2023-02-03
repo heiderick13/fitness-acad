@@ -58,6 +58,9 @@ export default {
                     <li class="nav-item">
                         <a class="nav-link" href="#professores">Nossos Professores</a>
                     </li>
+                    <li class="nav-item">
+                        <RouterLink class="nav-link" aria-current="page" to="/booking">agendamento</RouterLink>
+                    </li>
 
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0" v-if="usuarioperfil == 0">
@@ -77,6 +80,9 @@ export default {
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0" v-else>
+                    <li class="nav-item">
+                        <RouterLink class="nav-link" aria-current="page" @click="sair()" to="/">Sair</RouterLink>
+                    </li>
                     <li class="nav-item">
                         <RouterLink class="nav-link" aria-current="page" to="/user/add">Cadastro</RouterLink>
                     </li>

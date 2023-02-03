@@ -35,6 +35,16 @@ const router = createRouter({
       name: "criarplanilha",
       component: () => import("../views/CriarPlanilha.vue"),
     },
+    {
+      path: "/booking",
+      name: "bookingAdd",
+      component: () => import("../views/BookAdd.vue"),
+    },
+    {
+      path: "/booking/admin",
+      name: "bookingAdmin",
+      component: () => import("../views/BookAdmin.vue"),
+    },
   ],
 });
 

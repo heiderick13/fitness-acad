@@ -100,7 +100,8 @@ export default {
       <li class="atividade">
         <h2 class="titulo_atividade">Bike Indoor</h2>
         <p class="descricao_atividade">
-          É um exercício aeróbico que mistura elementos de diferentes ritmos, como salsa, samba, reggaetón e até mesmo
+          É um exercício aeróbico que mistura elementos de diferentes ritmos, como salsa, samba, reggaetón e
+          até mesmo
           hip-hop, tornando-se uma dança divertida, mas que queima muitas calorias!
         </p>
         <p class="preco_atividade">R$ 119,99</p>
@@ -121,7 +122,8 @@ export default {
       <p>
         Estamos localizados na Av taltaltal nº 777
         Chapa Quente - RJ Brasil.
-        Estamos no mercado há mais de 10 anos, tendo todo carinho e atenção com nossos alunos, trazendo para eles a auto
+        Estamos no mercado há mais de 10 anos, tendo todo carinho e atenção com nossos alunos, trazendo para
+        eles a auto
         estima para poder cuidar da sua saúde. Temos diverças modalidades para você se desafiar.
       </p>
       <P>
@@ -137,31 +139,37 @@ export default {
 
       <div>
         <span class="boxe">
-          Arthur Maliano - 34 anos, profissional há mais de 10 anos na área do boxe. Ele está disposto a ajudar os
+          Arthur Maliano - 34 anos, profissional há mais de 10 anos na área do boxe. Ele está disposto a
+          ajudar os
           alunos
           para emagrece e se defender.
         </span>
         <span class="bikeindoor">
-          Thiago Gomes - 30 anos, profissional durante 7 anos, já ajudou várias pessoas a atingir sua melhor forma e ter
+          Thiago Gomes - 30 anos, profissional durante 7 anos, já ajudou várias pessoas a atingir sua melhor
+          forma e ter
           uma vida
           saudável.
         </span>
 
         <span class="jiujitsu">
-          Carlos Alberto - 44 anos mestre de jiujitsu, tem diversas medalhas de compeonato e está disposto a formar
+          Carlos Alberto - 44 anos mestre de jiujitsu, tem diversas medalhas de compeonato e está disposto a
+          formar
           futuros campeões de jiujitsu.
         </span>
         <span class="musculacao">
-          Rafael Dias - 30 anos, personal com grande conhecimento na área para ajudar as pessoas que estão tendo
+          Rafael Dias - 30 anos, personal com grande conhecimento na área para ajudar as pessoas que estão
+          tendo
           difilcudades em atingir sua melhor forma.
         </span>
 
         <span class="jump">
           Leticia Ribeiro - 30 anos, professora muito procurada nesta área, por conta de seu trabalho bem
-          delicado para que não venha prejudicar os alunos que tem problema de saúde mas que queira fazer o jump.
+          delicado para que não venha prejudicar os alunos que tem problema de saúde mas que queira fazer o
+          jump.
         </span>
         <span class="natacao">
-          Ricardo Gomes- 25 anos, ele tem um ótimo trabalho de natação ao povo de terceira idade, crianças, tendo a
+          Ricardo Gomes- 25 anos, ele tem um ótimo trabalho de natação ao povo de terceira idade, crianças,
+          tendo a
           responsabilidade de dar o máximo suporte que o aluno esteja precisando.
         </span>
       </div>
