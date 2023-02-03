@@ -17,7 +17,7 @@ export default {
         <div id="footerContainer">
 
             <div id="footerLogo">
-                <h2 id="logo">Fitness</h2>
+                <img src="../../images/logo.png" alt="logo">
             </div>
 
             <div id="footerMap">
