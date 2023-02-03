@@ -2,16 +2,14 @@
 export default {
     name: 'NavBar',
     data() {
-        return { usuarioperfil: {}, rerender: 0 }
+        return { usuarioperfil: {} }
     },
     methods: {
-        //perfil 0 = funcionario, perfil 1 = cliente, perfil null = deslogado
         getUser() {
             try {
                 let userjson = JSON.parse(sessionStorage.getItem("user"));
                 this.usuarioperfil = userjson == null ? null :
                     userjson.perfil
-                // this.rerender++
             } catch (error) {
                 return error
             }
@@ -21,26 +19,35 @@ export default {
             sessionStorage.clear()
             this.usuarioperfil == null
             this.$router.push("/")
+        },
+        reloadNav() {
+            if (this.$route.path == "/") {
+                return
+            }
+
+            document.querySelector('.list-links').outerHTML = "";
         }
+
     },
     mounted() {
-        this.getUser()
+        this.getUser();
+        this.reloadNav();
     }
 }
 </script>
 
 <template>
-    <!-- :key="rerender" -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <RouterLink class="navbar-brand" to="/">Fitness</RouterLink>
+            <RouterLink class="navbar-brand" to="/"><img src="../../images/logo.png" alt="logo da academia" height="40">
+            </RouterLink>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="list-links navbar-nav me-auto mb-2 mb-lg-0">
 
                     <li class="nav-item">
                         <a class="nav-link" href="#quem-somos">Quem somos</a>
@@ -54,11 +61,6 @@ export default {
 
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0" v-if="usuarioperfil == 0">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn" type="submit">Pesquisar</button>
-                    </form>
-
                     <li class="nav-item">
                         <RouterLink class="nav-link" aria-current="page" to="/func/list">Clientes</RouterLink>
                     </li>
@@ -67,11 +69,6 @@ export default {
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0" v-else-if="usuarioperfil == 1">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn" type="submit">Pesquisar</button>
-                    </form>
-
                     <li class="nav-item">
                         <RouterLink class="nav-link" aria-current="page" to="/user/add">Minha Conta</RouterLink>
                     </li>
@@ -80,11 +77,6 @@ export default {
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0" v-else>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn" type="submit">Pesquisar</button>
-                    </form>
-
                     <li class="nav-item">
                         <RouterLink class="nav-link" aria-current="page" to="/user/add">Cadastro</RouterLink>
                     </li>
@@ -98,6 +90,15 @@ export default {
 </template>
 
 <style scoped>
+.navbar {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(255, 164, 28, 0.8));
+    font-weight: 700;
+}
+
+.navbar-brand {
+    margin-top: -10px;
+}
+
 .btn {
     color: var(--white);
     border-color: var(--white);
