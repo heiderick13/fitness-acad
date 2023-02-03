@@ -40,15 +40,15 @@ export default {
         <div class="carousel-item">
           <img src="../../images/exercise-weights-iron-dumbbell-with-extra-plates.jpg" class="d-block w-100" alt="...">
           <div class="carousel-caption d-md-block text-center">
-            <h5>Quem Somos?</h5>
-            <p>Uma Acadeia Voltada Para Aumentar seu Desempenho! </p>
+            <h5>Onde estamos?</h5>
+            <p>Procure por nossa academia mais proxima de sua residencia! </p>
           </div>
         </div>
         <div class="carousel-item">
           <img src="../../images/training-ge79437eb8_1280.jpg" class="d-block w-100" alt="...">
           <div class="carousel-caption d-md-block text-center">
-            <h5>Quem Somos?</h5>
-            <p>Uma Acadeia Voltada Para Aumentar seu Desempenho! </p>
+            <h5>Duvidas no treino?</h5>
+            <p>Entre em contato com uns de nossos personais e tire suas duvidas!</p>
           </div>
 
         </div>

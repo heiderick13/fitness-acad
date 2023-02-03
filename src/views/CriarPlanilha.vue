@@ -142,6 +142,10 @@ export default {
 </template>
 
 <style scoped>
+#corpo {
+    padding-bottom: 2rem;
+}
+
 .card1 {
     width: 300px;
     margin: auto;
