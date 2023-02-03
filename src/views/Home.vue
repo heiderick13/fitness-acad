@@ -25,6 +25,7 @@ export default {
 </script>
 
 <template>
+
   <NavBar :key="rerender"></NavBar>
   <section>
 
