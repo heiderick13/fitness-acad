@@ -35,7 +35,8 @@ export default {
           <div class="carousel-caption d-md-block text-center">
             <h5>Quem Somos?</h5>
             <p>Uma Acadeia Voltada Para Aumentar seu Desempenho! </p>
-            <button type="button" class="btn btn-outline-warning">confira</button>
+            <li class="nav-item">
+            <a class="nav-link" href="#quem-somos"><button type="button" class="btn btn-outline-warning">Warning</button></a></li>
           </div>
         </div>
         <div class="carousel-item">
@@ -44,6 +45,7 @@ export default {
             <h5>Onde estamos?</h5>
             <p>Procure por nossa academia mais proxima de sua residencia! </p>
             <button type="button" class="btn btn-outline-warning">confira</button>
+              <a href="#"><button type="button" class="btn btn-outline-warning">Warning</button></a>
           </div>
         </div>
         <div class="carousel-item">
@@ -51,7 +53,6 @@ export default {
           <div class="carousel-caption d-md-block text-center">
             <h5>Duvidas no treino?</h5>
             <p>Entre em contato com uns de nossos personais e tire suas duvidas!</p>
-            <button type="button" class="btn btn-outline-warning">confira</button>
           </div>
 
         </div>
@@ -207,11 +208,7 @@ html {
   color: var(--white);
 }
 
-.btn-outline-warning{
-  margin-top: -130vh;
 
-}
-   
 #atividades {
   min-height: 100vh;
   background-color: var(--primary);
@@ -309,10 +306,6 @@ html {
   .carousel-caption p {
     margin-bottom: 30%;
   }
-    .btn-outline-warning {
-      margin-top: -100px;
-  
-    }
 
 }
 
