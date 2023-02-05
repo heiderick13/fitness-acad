@@ -34,7 +34,7 @@ export default {
         <div class="form-group">
             <label for="">Nome</label>
             <input type="text" name="nome" class="form-control" placeholder="" aria-describedby="helpName"
-                v-model="user.nome" />
+                v-model="user.nome"/>
             <small id="helpName" class="text-muted"></small>
         </div>
 
@@ -76,9 +76,9 @@ export default {
             <button type="button" class="btn mx-2" @click="cadastro()">
                 Cadastrar
             </button>
-            <button type="button" class="btn mx-2">
-                Sair
-            </button>
+            <RouterLink type="button" class="btn mx-2" to="/">
+                Voltar
+            </RouterLink>
         </div>
     </section>
 </template>

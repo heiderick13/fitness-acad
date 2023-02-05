@@ -14,15 +14,18 @@ export default {
         entrar() {
             userService.login(this.user)
                 .then((res) => {
-                    console.log(res.data);
                     sessionStorage.setItem("user", JSON.stringify(res.data));
                     this.$router.push("/");
-                    this.$router.go();
-                    console.log("Logado!")
+                    this.$router.go()
+                    .then(()=>{alert("Logado!") });
+                    
                 })
+                
                 .catch((error) => {
                     console.log(error);
-                    alert("Erro ao tentar entrar!");
+                    this.$router.push("/user/login")
+                    alert("Erro no Login!");
+
                 });
         }
     }

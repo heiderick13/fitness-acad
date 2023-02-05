@@ -10,7 +10,7 @@ export default {
     },
 
     data() {
-        return { exercicios: [], grupoMuscular: [] }
+        return { exercicios: [], grupoMuscular: [], counterId: 0 }
     },
     methods: {
         allExercises() {
@@ -22,6 +22,7 @@ export default {
                     console.log(error)
                 })
         },
+
         filterExercises() {
             const exercicios = this.exercicios
             this.grupoMuscular = [];
@@ -36,7 +37,6 @@ export default {
             if (!document.getElementById("series").value || !document.getElementById("repeticoes").value) {
                 alert("Campos em branco")
             }
-            let counter = 0
             const selectedExercise = document.getElementById("exercicioescolhido").value
             const selectedSerie = document.getElementById("serieEscolhida").value
             this.exercicios.forEach(e => {
@@ -45,22 +45,25 @@ export default {
                     e.repeticoes = document.getElementById("repeticoes").value
                     document.querySelectorAll(".seriecard").forEach(ele => {
                         if (selectedSerie == ele.id) {
-                            ele.innerHTML +=
-                                '<div class="exercicio border-end border-start px-2">' +
-                                '<span class="fw-light">Exercício<br></span>' + e.nome +
+                            let counterId = this.counterId
+                            const dinamicId = document.createElement("div")
+                            dinamicId.id = "exerDinamicId" + (counterId)
+                            dinamicId.classList.add("border-end", "border-start", "px-2")
+                            ele.appendChild(dinamicId)
+                            ele.lastChild.innerHTML += '<span class="fw-light">Exercício<br></span>' + e.nome +
                                 '<br><span class="fw-light">Series</span><br>' + e.series +
                                 '<br><span class="fw-light">Reps</span><br>' + e.repeticoes +
-                                '<div type="button" class="btn btn-danger p-1 mx-2"><i class="bi bi-trash"></i></div>'
-                            '</div>';
+                                '<button class="btn btn-danger p-1 mx-2"><i class="bi bi-trash"></i></button>';
+                                
+                                dinamicId.addEventListener("click", () => {
+                                    dinamicId.remove()
+                                });
+                                this.counterId += 1;
                         }
                     })
 
                 }
             })
-        },
-        deleteExerciseHTML(ele) {
-
-            ele.parentElement.remove()
         }
 
 
@@ -71,6 +74,8 @@ export default {
     }
 
 }
+
+
 </script>
 
 <template>
@@ -78,23 +83,27 @@ export default {
     <div class="container text-center">
         <div class="card1 card form-control my-5">
             <h2 class="text-center">Add Exercicios</h2>
-            <select @click="filterExercises()" id="gruposmusculares" class="form-select my-2">
+            <select @click="filterExercises()" id="gruposmusculares"
+                class="form-select my-2">
                 <option selected>Grupo Muscular</option>
                 <option value="Peitoral">Peitoral</option>
                 <option value="Costas">Costas</option>
                 <option value="Pernas">Pernas</option>
             </select>
-            <select @click="filterExercises()" class="form-select my-2" id="exercicioescolhido">
+            <select @click="filterExercises()" class="form-select my-2"
+                id="exercicioescolhido">
                 <option selected>Exercicios</option>
                 <option v-for="musculo in grupoMuscular" :key="musculo"> {{
                     musculo.nome
                 }}</option>
             </select>
             <div class="input-group my-2">
-                <input type="number" class="form-control" placeholder="Series" aria-label="series" id="series" required>
+                <input type="number" class="form-control" placeholder="Series"
+                    aria-label="series" id="series" required>
             </div>
             <div class="input-group my-2">
-                <input type="number" class="form-control" placeholder="Repeticoes" aria-label="repeticoes"
+                <input type="number" class="form-control"
+                    placeholder="Repeticoes" aria-label="repeticoes"
                     id="repeticoes" required>
             </div>
             <select id="serieEscolhida" class="form-select my-2">
@@ -106,7 +115,8 @@ export default {
                 <option id="serieselector">Serie-E</option>
                 <option id="serieselector">Serie-F</option>
             </select>
-            <button class="btn btn-primary" @click="createExercisesHTML()">Adicionar</button>
+            <button class="btn btn-primary"
+                @click="createExercisesHTML()">Adicionar</button>
         </div>
     </div>
     <div id="corpo" class="d-flex">
