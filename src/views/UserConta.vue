@@ -120,7 +120,7 @@ export default {
                         </div>
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn mx-2" @click="updateUser()">Atualizard</button>
+                        <button type="button" class="btn mx-2" @click="updateUser()">Atualizar</button>
                         <button type="button" ref="close" class="btn mx-2" data-bs-dismiss="modal">Voltar</button>
                       </div>
                     </div>
