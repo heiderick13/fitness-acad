@@ -35,6 +35,11 @@ const router = createRouter({
       name: "criarplanilha",
       component: () => import("../views/CriarPlanilha.vue"),
     },
+    {
+      path: "/user/conta",
+      name:"contaUsuario",
+      component: () => import("../views/UserConta.vue")
+    }
   ],
 });
 

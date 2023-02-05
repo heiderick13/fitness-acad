@@ -2,7 +2,7 @@
 export default {
     name: 'NavBar',
     data() {
-        return { usuarioperfil: {} }
+        return { usuarioperfil: {}, useremail:{} }
     },
     methods: {
         getUser() {
@@ -10,6 +10,7 @@ export default {
                 let userjson = JSON.parse(sessionStorage.getItem("user"));
                 this.usuarioperfil = userjson == null ? null :
                     userjson.perfil
+
             } catch (error) {
                 return error
             }
@@ -24,7 +25,6 @@ export default {
             if (this.$route.path == "/") {
                 return
             }
-
             document.querySelector('.list-links').outerHTML = "";
         }
 
@@ -70,7 +70,7 @@ export default {
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0" v-else-if="usuarioperfil == 1">
                     <li class="nav-item">
-                        <RouterLink class="nav-link" aria-current="page" to="/user/add">Minha Conta</RouterLink>
+                        <RouterLink class="nav-link" aria-current="page" to='/user/conta'>Minha Conta</RouterLink>
                     </li>
                     <li class="nav-item">
                         <RouterLink class="nav-link" aria-current="page" @click="sair()" to="/">Sair</RouterLink>

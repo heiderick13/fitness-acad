@@ -18,9 +18,7 @@ export default {
     this.forceRerender()
   }
 }
-// export default {
-//   components: { NavBar }
-// }
+
 
 </script>
 
